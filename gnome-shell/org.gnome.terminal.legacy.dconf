@@ -1,0 +1,14 @@
+[profiles:/:bb4ddf14-4bb9-4366-83f8-063fe799657d]
+background-color='rgb(68,68,68)'
+use-theme-colors=false
+foreground-color='rgb(255,255,255)'
+visible-name='Numix'
+audible-bell=false
+
+[profiles:]
+list=['bb4ddf14-4bb9-4366-83f8-063fe799657d']
+default='bb4ddf14-4bb9-4366-83f8-063fe799657d'
+
+[/]
+schema-version=uint32 3
+default-show-menubar=false
