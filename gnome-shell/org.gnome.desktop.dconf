@@ -1,5 +1,6 @@
 [interface]
 text-scaling-factor=1.0
+gtk-key-theme='Emacs'
 font-name='Ubuntu 11'
 gtk-im-module='ibus'
 show-battery-percentage=true
