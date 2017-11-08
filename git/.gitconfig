@@ -1,0 +1,10 @@
+[push]
+	default = simple
+[help]
+	autocorrect = 10
+[core]
+	editor = vim
+[hub]
+	protocol = ssh
+[alias]
+	tree = log --graph --decorate --pretty=oneline --abbrev-commit --all
