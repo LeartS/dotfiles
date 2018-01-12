@@ -1,14 +1,414 @@
+[/]
+menu-accelerator-enabled=false
+schema-version=uint32 3
+default-show-menubar=false
+theme-variant='system'
+
+[profiles:/:d49353b9-a4bf-452f-a583-03cb656bb660]
+foreground-color='#f2f2f2f2f2f2'
+visible-name='Elic'
+nord-gnome-terminal-version='0.1.0'
+palette=['#303030303030', '#e1e132321a1a', '#6a6ab0b01717', '#ffffc0c00505', '#72729F9FCFCF', '#ecec00004848', '#f2f2f2f2f2f2', '#2a2aa7a7e7e7', '#5d5d5d5d5d5d', '#ffff36361e1e', '#7b7bc9c91f1f', '#ffffd0d00a0a', '#00007171ffff', '#ffff1d1d6262', '#4b4bb8b8fdfd', '#a0a02020f0f0']
+cursor-background-color='rgb(216,222,233)'
+use-system-font=false
+cursor-colors-set=true
+highlight-colors-set=true
+use-theme-colors=false
+use-transparent-background=false
+font='Fira Code weight=450 10'
+cursor-foreground-color='rgb(59,66,82)'
+use-theme-transparency=false
+use-theme-background=false
+bold-color-same-as-fg=true
+bold-color='#2a2aa7a7e7e7'
+background-color='#4A4A45453E3E'
+audible-bell=false
+highlight-background-color='rgb(136,192,208)'
+highlight-foreground-color='rgb(46,52,64)'
+
 [profiles:/:bb4ddf14-4bb9-4366-83f8-063fe799657d]
 background-color='rgb(68,68,68)'
 use-theme-colors=false
-foreground-color='rgb(255,255,255)'
 visible-name='Numix'
+foreground-color='rgb(247,240,240)'
+use-system-font=false
 audible-bell=false
+font='Ubuntu Mono 12'
+
+[profiles:/:61647a48-8a60-4ce0-b94c-c6a02bdfa61e]
+foreground-color='rgb(216,222,233)'
+visible-name='Nord'
+nord-gnome-terminal-version='0.1.0'
+palette=['#3B4252', '#BF616A', '#A3BE8C', '#EBCB8B', '#81A1C1', '#B48EAD', '#88C0D0', '#E5E9F0', '#4C566A', '#BF616A', '#A3BE8C', '#EBCB8B', '#81A1C1', '#B48EAD', '#8FBCBB', '#ECEFF4']
+cursor-background-color='rgb(216,222,233)'
+use-system-font=false
+cursor-colors-set=true
+highlight-colors-set=true
+use-theme-colors=false
+use-transparent-background=false
+font='Source Code Pro 10'
+cursor-foreground-color='rgb(59,66,82)'
+use-theme-transparency=false
+use-theme-background=false
+bold-color-same-as-fg=true
+bold-color='#D8DEE9'
+background-color='rgb(46,52,64)'
+audible-bell=false
+highlight-background-color='rgb(136,192,208)'
+highlight-foreground-color='rgb(46,52,64)'
+
+[profiles:/:ad4a3f48-be14-4b17-900e-4eb1fc5a0dc1]
+foreground-color='#F7F7F7F7F7F7'
+visible-name='Smyck'
+nord-gnome-terminal-version='0.1.0'
+palette=['#000000000000', '#C7C756564646', '#8E8EB3B33B3B', '#D0D0B0B03C3C', '#7272B3B3CCCC', '#C8C8A0A0D1D1', '#212186869393', '#B0B0B0B0B0B0', '#5D5D5D5D5D5D', '#E0E096969090', '#CDCDEEEE6969', '#FFFFE3E37777', '#9C9CD9D9F0F0', '#FBFBB1B1F9F9', '#7777DFDFD8D8', '#F7F7F7F7F7F7']
+cursor-background-color='rgb(216,222,233)'
+use-system-font=false
+cursor-colors-set=true
+highlight-colors-set=true
+use-theme-colors=false
+use-transparent-background=false
+font='Fira Code weight=450 10'
+cursor-foreground-color='rgb(59,66,82)'
+use-theme-transparency=false
+use-theme-background=false
+bold-color-same-as-fg=true
+bold-color='#B0B0B0B0B0B0'
+background-color='#242424242424'
+audible-bell=false
+highlight-background-color='rgb(136,192,208)'
+highlight-foreground-color='rgb(46,52,64)'
+
+[profiles:/:da4e2f13-7fd2-450e-8a67-bab372d70fe0]
+foreground-color='#9494a3a3a5a5'
+visible-name='Freya'
+nord-gnome-terminal-version='0.1.0'
+palette=['#070736364242', '#dcdc32322f2f', '#858599990000', '#b5b589890000', '#26268b8bd2d2', '#ecec00004848', '#2a2aa1a19898', '#9494a3a3a5a5', '#58586e6e7575', '#cbcb4b4b1616', '#858599990000', '#b5b589890000', '#26268b8bd2d2', '#d3d336368282', '#2a2aa1a19898', '#6c6c7171c4c4']
+cursor-background-color='rgb(216,222,233)'
+use-system-font=false
+cursor-colors-set=true
+highlight-colors-set=true
+use-theme-colors=false
+use-transparent-background=false
+font='Fira Code weight=450 10'
+cursor-foreground-color='rgb(59,66,82)'
+use-theme-transparency=false
+use-theme-background=false
+bold-color-same-as-fg=true
+bold-color='#9494a3a3a5a5'
+background-color='#25252e2e3232'
+audible-bell=false
+highlight-background-color='rgb(136,192,208)'
+highlight-foreground-color='rgb(46,52,64)'
+
+[profiles:/:ec137e80-d222-4f87-8d1a-16116e2b055d]
+foreground-color='rgb(243,243,243)'
+visible-name='Hybrid'
+nord-gnome-terminal-version='0.1.0'
+palette=['#28282a2a2e2e', '#A5A542424242', '#8C8C94944040', '#dede93935f5f', '#5F5F81819D9D', '#858567678F8F', '#5E5E8D8D8787', '#969698989696', '#37373b3b4141', '#cccc66666666', '#b5b5bdbd6868', '#f0f0c6c67474', '#8181a2a2bebe', '#b2b29494bbbb', '#8a8abebeb7b7', '#c5c5c8c8c6c6']
+cursor-background-color='rgb(216,222,233)'
+use-system-font=false
+cursor-colors-set=true
+highlight-colors-set=true
+use-theme-colors=false
+use-transparent-background=false
+font='Source Code Pro 10'
+cursor-foreground-color='rgb(59,66,82)'
+use-theme-transparency=false
+use-theme-background=false
+bold-color-same-as-fg=true
+bold-color='#969698989696'
+background-color='#141414141414'
+audible-bell=false
+highlight-background-color='rgb(136,192,208)'
+highlight-foreground-color='rgb(46,52,64)'
 
 [profiles:]
-list=['bb4ddf14-4bb9-4366-83f8-063fe799657d']
-default='bb4ddf14-4bb9-4366-83f8-063fe799657d'
+default='61647a48-8a60-4ce0-b94c-c6a02bdfa61e'
+list=['bb4ddf14-4bb9-4366-83f8-063fe799657d', '61647a48-8a60-4ce0-b94c-c6a02bdfa61e', '0b0f9056-015d-43d7-acd7-f1f0f65dde21', 'fa064c7b-789b-4f71-9294-87543674aa6b', '5ba44474-7ce3-4f98-b8b0-6b250cd7b70c', '38111eb0-79c1-416e-b2d5-fb0200a6877e', '04113437-05e7-4e5e-9487-5fede3591755', '10c3a1b7-64da-40df-a3e8-7e30ec9756e8', 'd140e215-cc33-4766-b22e-9eda8c5a9bca', 'b1c1990b-5008-4c5f-9915-a3e961f2e358', 'd49353b9-a4bf-452f-a583-03cb656bb660', 'ec137e80-d222-4f87-8d1a-16116e2b055d', '2f6a188e-8e2a-4995-b95b-f152731a8c00', '376ef5bd-fae3-409d-b240-64754905c785', 'ad4a3f48-be14-4b17-900e-4eb1fc5a0dc1', 'e3477667-1e78-48c6-9c98-f46fd026b8b4', '35ef22b4-0694-419f-b98e-f1e728d66adb', 'da4e2f13-7fd2-450e-8a67-bab372d70fe0', 'd75f4b1a-65c1-4ad5-a2eb-d4469bf03048']
 
-[/]
-schema-version=uint32 3
-default-show-menubar=false
+[profiles:/:2f6a188e-8e2a-4995-b95b-f152731a8c00]
+foreground-color='#C3C3C7C7D1D1'
+visible-name='Material'
+nord-gnome-terminal-version='0.1.0'
+palette=['#070736364141', '#EBEB60606B6B', '#C3C3E8E88D8D', '#F7F7EBEB9595', '#8080CBCBC3C3', '#FFFF24249090', '#AEAEDDDDFFFF', '#FFFFFFFFFFFF', '#00002B2B3636', '#EBEB60606B6B', '#C3C3E8E88D8D', '#F7F7EBEB9595', '#7D7DC6C6BFBF', '#6C6C7171C3C3', '#343443434D4D', '#FFFFFFFFFFFF']
+cursor-background-color='rgb(216,222,233)'
+use-system-font=false
+cursor-colors-set=true
+highlight-colors-set=true
+use-theme-colors=false
+use-transparent-background=false
+font='Fira Code weight=450 10'
+cursor-foreground-color='rgb(59,66,82)'
+use-theme-transparency=false
+use-theme-background=false
+bold-color-same-as-fg=true
+bold-color='#FFFFFFFFFFFF'
+background-color='#1E1E28282C2C'
+audible-bell=false
+highlight-background-color='rgb(136,192,208)'
+highlight-foreground-color='rgb(46,52,64)'
+
+[profiles:/:d140e215-cc33-4766-b22e-9eda8c5a9bca]
+foreground-color='#D4D4D4D4D4D4'
+visible-name='Chalk'
+nord-gnome-terminal-version='0.1.0'
+palette=['#646464646464', '#F5F58E8E8E8E', '#A9A9D3D3ABAB', '#FEFED3D37E7E', '#7A7AABABD4D4', '#D6D6ADADD5D5', '#7979D4D4D5D5', '#D4D4D4D4D4D4', '#646464646464', '#F5F58E8E8E8E', '#A9A9D3D3ABAB', '#FEFED3D37E7E', '#7A7AABABD4D4', '#D6D6ADADD5D5', '#7979D4D4D5D5', '#D4D4D4D4D4D4']
+cursor-background-color='rgb(216,222,233)'
+use-system-font=false
+cursor-colors-set=true
+highlight-colors-set=true
+use-theme-colors=false
+use-transparent-background=false
+font='Fira Code weight=450 10'
+cursor-foreground-color='rgb(59,66,82)'
+use-theme-transparency=false
+use-theme-background=false
+bold-color-same-as-fg=true
+bold-color='#D4D4D4D4D4D4'
+background-color='#2D2D2D2D2D2D'
+audible-bell=false
+highlight-background-color='rgb(136,192,208)'
+highlight-foreground-color='rgb(46,52,64)'
+
+[profiles:/:10c3a1b7-64da-40df-a3e8-7e30ec9756e8]
+foreground-color='#d9d9e6e6f2f2'
+visible-name='Cai'
+nord-gnome-terminal-version='0.1.0'
+palette=['#000000000000', '#caca27274d4d', '#4d4dcaca2727', '#cacaa4a42727', '#27274d4dcaca', '#a4a42727caca', '#2727cacaa4a4', '#808080808080', '#808080808080', '#e9e98d8da3a3', '#a3a3e9e98d8d', '#e9e9d4d48d8d', '#8d8da3a3e9e9', '#d4d48d8de9e9', '#8d8de9e9d4d4', '#ffffffffffff']
+cursor-background-color='rgb(216,222,233)'
+use-system-font=false
+cursor-colors-set=true
+highlight-colors-set=true
+use-theme-colors=false
+use-transparent-background=false
+font='Fira Code weight=450 10'
+cursor-foreground-color='rgb(59,66,82)'
+use-theme-transparency=false
+use-theme-background=false
+bold-color-same-as-fg=true
+bold-color='#808080808080'
+background-color='#090911111a1a'
+audible-bell=false
+highlight-background-color='rgb(136,192,208)'
+highlight-foreground-color='rgb(46,52,64)'
+
+[profiles:/:5ba44474-7ce3-4f98-b8b0-6b250cd7b70c]
+foreground-color='#232347476a6a'
+visible-name='Mar'
+nord-gnome-terminal-version='0.1.0'
+palette=['#000000000000', '#b5b540407b7b', '#7b7bb5b54040', '#b5b57b7b4040', '#40407b7bb5b5', '#7b7b4040b5b5', '#4040b5b57b7b', '#f8f8f8f8f8f8', '#737373737373', '#cdcd7373a0a0', '#a0a0cdcd7373', '#cdcda0a07373', '#7373a0a0cdcd', '#a0a07373cdcd', '#7373cdcda0a0', '#ffffffffffff']
+cursor-background-color='rgb(216,222,233)'
+use-system-font=false
+cursor-colors-set=true
+highlight-colors-set=true
+use-theme-colors=false
+use-transparent-background=false
+font='Fira Code weight=450 10'
+cursor-foreground-color='rgb(59,66,82)'
+use-theme-transparency=false
+use-theme-background=false
+bold-color-same-as-fg=true
+bold-color='#f8f8f8f8f8f8'
+background-color='#ffffffffffff'
+audible-bell=false
+highlight-background-color='rgb(136,192,208)'
+highlight-foreground-color='rgb(46,52,64)'
+
+[profiles:/:376ef5bd-fae3-409d-b240-64754905c785]
+foreground-color='#d9d9e6e6f2f2'
+visible-name='Pali'
+nord-gnome-terminal-version='0.1.0'
+palette=['#0a0a0a0a0a0a', '#abab8f8f7474', '#7474abab8f8f', '#8f8fabab7474', '#8f8f7474abab', '#abab74748f8f', '#74748f8fabab', '#F2F2F2F2F2F2', '#5D5D5D5D5D5D', '#FFFF1D1D6262', '#9c9cc3c3afaf', '#FFFFD0D00A0A', '#afaf9c9cc3c3', '#FFFF1D1D6262', '#4B4BB8B8FDFD', '#A0A02020F0F0']
+cursor-background-color='rgb(216,222,233)'
+use-system-font=false
+cursor-colors-set=true
+highlight-colors-set=true
+use-theme-colors=false
+use-transparent-background=false
+font='Fira Code weight=450 10'
+cursor-foreground-color='rgb(59,66,82)'
+use-theme-transparency=false
+use-theme-background=false
+bold-color-same-as-fg=true
+bold-color='#F2F2F2F2F2F2'
+background-color='#23232E2E3737'
+audible-bell=false
+highlight-background-color='rgb(136,192,208)'
+highlight-foreground-color='rgb(46,52,64)'
+
+[profiles:/:35ef22b4-0694-419f-b98e-f1e728d66adb]
+foreground-color='rgb(211,215,207)'
+visible-name='Flat'
+nord-gnome-terminal-version='0.1.0'
+palette=['#2c2c3e3e5050', '#c0c039392b2b', '#2727aeae6060', '#f3f39c9c1212', '#29298080b9b9', '#8e8e4444adad', '#1616a0a08585', '#bdbdc3c3c7c7', '#343449495e5e', '#e7e74c4c3c3c', '#2e2ecccc7171', '#f1f1c4c40f0f', '#34349898dbdb', '#9b9b5959b6b6', '#2A2AA1A19898', '#ececf0f0f1f1']
+cursor-background-color='rgb(216,222,233)'
+use-system-font=false
+cursor-colors-set=true
+highlight-colors-set=true
+use-theme-colors=false
+use-transparent-background=false
+font='Fira Code weight=450 10'
+cursor-foreground-color='rgb(59,66,82)'
+use-theme-transparency=false
+use-theme-background=false
+bold-color-same-as-fg=true
+bold-color='#bdbdc3c3c7c7'
+background-color='#1F1F2D2D3A3A'
+audible-bell=false
+highlight-background-color='rgb(136,192,208)'
+highlight-foreground-color='rgb(46,52,64)'
+
+[profiles:/:b1c1990b-5008-4c5f-9915-a3e961f2e358]
+foreground-color='#f2f2f2f2f2f2'
+visible-name='Elementary'
+nord-gnome-terminal-version='0.1.0'
+palette=['#303030303030', '#e1e132321a1a', '#6a6ab0b01717', '#ffffc0c00505', '#00004f4f9e9e', '#ecec00004848', '#2a2aa7a7e7e7', '#f2f2f2f2f2f2', '#5d5d5d5d5d5d', '#ffff36361e1e', '#7b7bc9c91f1f', '#ffffd0d00a0a', '#00007171ffff', '#ffff1d1d6262', '#4b4bb8b8fdfd', '#a0a02020f0f0']
+cursor-background-color='rgb(216,222,233)'
+use-system-font=false
+cursor-colors-set=true
+highlight-colors-set=true
+use-theme-colors=false
+use-transparent-background=false
+font='Fira Code weight=450 10'
+cursor-foreground-color='rgb(59,66,82)'
+use-theme-transparency=false
+use-theme-background=false
+bold-color-same-as-fg=true
+bold-color='#f2f2f2f2f2f2'
+background-color='#101010101010'
+audible-bell=false
+highlight-background-color='rgb(136,192,208)'
+highlight-foreground-color='rgb(46,52,64)'
+
+[profiles:/:d75f4b1a-65c1-4ad5-a2eb-d4469bf03048]
+foreground-color='#4D4D4D4D4C4C'
+visible-name='Tomorrow'
+nord-gnome-terminal-version='0.1.0'
+palette=['#000000000000', '#C8C828282828', '#71718C8C0000', '#EAEAB7B70000', '#41417171AEAE', '#89895959A8A8', '#3E3E99999F9F', '#FFFFFEFEFEFE', '#000000000000', '#C8C828282828', '#70708B8B0000', '#E9E9B6B60000', '#41417070AEAE', '#89895858A7A7', '#3D3D99999F9F', '#FFFFFEFEFEFE']
+cursor-background-color='rgb(216,222,233)'
+use-system-font=false
+cursor-colors-set=true
+highlight-colors-set=true
+use-theme-colors=false
+use-transparent-background=false
+font='Fira Code weight=450 10'
+cursor-foreground-color='rgb(59,66,82)'
+use-theme-transparency=false
+use-theme-background=false
+bold-color-same-as-fg=true
+bold-color='#FFFFFEFEFEFE'
+background-color='#FFFFFFFFFFFF'
+audible-bell=false
+highlight-background-color='rgb(136,192,208)'
+highlight-foreground-color='rgb(46,52,64)'
+
+[profiles:/:38111eb0-79c1-416e-b2d5-fb0200a6877e]
+foreground-color='#b4b4e1e1fdfd'
+visible-name='Aci'
+nord-gnome-terminal-version='0.1.0'
+palette=['#363636363636', '#ffff08088383', '#8383ffff0808', '#ffff83830808', '#08088383ffff', '#83830808ffff', '#0808ffff8383', '#b6b6b6b6b6b6', '#424242424242', '#ffff1e1e8e8e', '#8e8effff1e1e', '#ffff8e8e1e1e', '#1e1e8e8effff', '#8e8e1e1effff', '#1e1effff8e8e', '#c2c2c2c2c2c2']
+cursor-background-color='rgb(216,222,233)'
+use-system-font=false
+cursor-colors-set=true
+highlight-colors-set=true
+use-theme-colors=false
+use-transparent-background=false
+font='Fira Code weight=450 10'
+cursor-foreground-color='rgb(59,66,82)'
+use-theme-transparency=false
+use-theme-background=false
+bold-color-same-as-fg=true
+bold-color='#b6b6b6b6b6b6'
+background-color='#0d0d19192626'
+audible-bell=false
+highlight-background-color='rgb(136,192,208)'
+highlight-foreground-color='rgb(46,52,64)'
+
+[profiles:/:04113437-05e7-4e5e-9487-5fede3591755]
+foreground-color='#b4b4e1e1fdfd'
+visible-name='Aco'
+nord-gnome-terminal-version='0.1.0'
+palette=['#3f3f3f3f3f3f', '#ffff08088383', '#8383ffff0808', '#ffff83830808', '#08088383ffff', '#83830808ffff', '#0808ffff8383', '#bebebebebebe', '#474747474747', '#ffff1e1e8e8e', '#8e8effff1e1e', '#ffff8e8e1e1e', '#1e1e8e8effff', '#8e8e1e1effff', '#1e1effff8e8e', '#c4c4c4c4c4c4']
+cursor-background-color='rgb(216,222,233)'
+use-system-font=false
+cursor-colors-set=true
+highlight-colors-set=true
+use-theme-colors=false
+use-transparent-background=false
+font='Fira Code weight=450 10'
+cursor-foreground-color='rgb(59,66,82)'
+use-theme-transparency=false
+use-theme-background=false
+bold-color-same-as-fg=true
+bold-color='#bebebebebebe'
+background-color='#1f1f13130505'
+audible-bell=false
+highlight-background-color='rgb(136,192,208)'
+highlight-foreground-color='rgb(46,52,64)'
+
+[profiles:/:e3477667-1e78-48c6-9c98-f46fd026b8b4]
+foreground-color='#d9d9e6e6f2f2'
+visible-name='Vag'
+nord-gnome-terminal-version='0.1.0'
+palette=['#303030303030', '#a8a871713939', '#3939a8a87171', '#7171a8a83939', '#71713939a8a8', '#a8a839397171', '#39397171a8a8', '#8a8a8a8a8a8a', '#494949494949', '#b0b076763b3b', '#3b3bb0b07676', '#7676b0b03b3b', '#76763b3bb0b0', '#b0b03b3b7676', '#3b3b7676b0b0', '#cfcfcfcfcfcf']
+cursor-background-color='rgb(216,222,233)'
+use-system-font=false
+cursor-colors-set=true
+highlight-colors-set=true
+use-theme-colors=false
+use-transparent-background=false
+font='Fira Code weight=450 10'
+cursor-foreground-color='rgb(59,66,82)'
+use-theme-transparency=false
+use-theme-background=false
+bold-color-same-as-fg=true
+bold-color='#8a8a8a8a8a8a'
+background-color='#19191f1f1d1d'
+audible-bell=false
+highlight-background-color='rgb(136,192,208)'
+highlight-foreground-color='rgb(46,52,64)'
+
+[profiles:/:fa064c7b-789b-4f71-9294-87543674aa6b]
+foreground-color='#383A42'
+visible-name='One Light'
+nord-gnome-terminal-version='0.1.0'
+palette=['#000000', '#E45649', '#50A14F', '#986801', '#4078F2', '#A626A4', '#0184BC', '#A0A1A7', '#5c6370', '#E45649', '#50A14F', '#986801', '#4078F2', '#A626A4', '#0184BC', '#ffffff']
+cursor-background-color='rgb(216,222,233)'
+use-system-font=false
+cursor-colors-set=true
+highlight-colors-set=true
+use-theme-colors=false
+use-transparent-background=false
+font='Fira Code weight=450 11'
+cursor-foreground-color='rgb(59,66,82)'
+use-theme-transparency=false
+use-theme-background=false
+bold-color-same-as-fg=true
+bold-color='#383A42'
+background-color='#F9F9F9'
+audible-bell=false
+highlight-background-color='rgb(136,192,208)'
+highlight-foreground-color='rgb(46,52,64)'
+
+[profiles:/:0b0f9056-015d-43d7-acd7-f1f0f65dde21]
+foreground-color='#abb2bf'
+visible-name='One Dark'
+nord-gnome-terminal-version='0.1.0'
+palette=['#000000', '#E06C75', '#98c379', '#d19a66', '#61aeee', '#c678dd', '#56b6c2', '#abb2bf', '#5c6370', '#e06c75', '#98c379', '#d19a66', '#62afee', '#c678dd', '#56b6c2', '#ffffff']
+cursor-background-color='rgb(216,222,233)'
+use-system-font=false
+cursor-colors-set=true
+highlight-colors-set=true
+use-theme-colors=false
+use-transparent-background=false
+font='Fira Code weight=450 11'
+cursor-foreground-color='rgb(59,66,82)'
+use-theme-transparency=false
+use-theme-background=false
+bold-color-same-as-fg=true
+bold-color='#ABB2BF'
+background-color='#282c34'
+audible-bell=false
+highlight-background-color='rgb(136,192,208)'
+highlight-foreground-color='rgb(46,52,64)'
