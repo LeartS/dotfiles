@@ -29,9 +29,12 @@ This function should only modify configuration layer settings."
    dotspacemacs-configuration-layer-path '()
    ;; List of configuration layers to load.
    dotspacemacs-configuration-layers
-   '(yaml
+   '(markdown
+     yaml
      javascript
      docker
+     clojure
+     haskell
      csv
      python
      ;; ----------------------------------------------------------------
@@ -40,6 +43,7 @@ This function should only modify configuration layer settings."
      ;; `M-m f e R' (Emacs style) to install them.
      ;; ----------------------------------------------------------------
      helm
+     html
      (auto-completion :variables
                       auto-completion-enable-sort-by-usage t
                       auto-completion-enable-help-tooltip t
