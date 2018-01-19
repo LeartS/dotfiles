@@ -362,13 +362,26 @@ This function is called at the very end of Spacemacs startup, after layer
 configuration.
 Put your configuration code here, except for variables that should be set
 before packages are loaded."
-  
+
   ;; js2-mode personalizations
   (setq flycheck-disabled-checkers '(javascript-jshint python-flake8))
   (setq js2-strict-missing-semi-warning nil)  ;; no warning for missing semicolon
   (setq js2-strict-trailing-comma-warning nil) ;; no warning for trailing comma in objects
   (setq-default js2-basic-offset 2)
-  (setq js2-basic-offset 2)
+  (setq-default js-indent-level 2)
+
+  ;; use local eslint from node_modules before global
+  ;; http://emacs.stackexchange.com/questions/21205/flycheck-with-file-relative-eslint-executable
+  (defun my/use-eslint-from-node-modules ()
+    (let* ((root (locate-dominating-file
+                  (or (buffer-file-name) default-directory)
+                  "node_modules"))
+           (eslint (and root
+                        (expand-file-name "node_modules/eslint/bin/eslint.js"
+                                          root))))
+      (when (and eslint (file-executable-p eslint))
+        (setq-local flycheck-javascript-eslint-executable eslint))))
+  (add-hook 'flycheck-mode-hook #'my/use-eslint-from-node-modules)
 
   ;; powerline
   (setq powerline-default-separator 'arrow)
