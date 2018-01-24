@@ -403,6 +403,10 @@ before packages are loaded."
   (with-eval-after-load "projectile"
     (add-to-list 'projectile-project-root-files-bottom-up "__openerp__.py")
     (add-to-list 'projectile-project-root-files-bottom-up "__manifest__.py"))
+
+  ;; enable rainbow-mode by default
+  ;; (not sure if it actually works)
+  (add-hook 'prog-mode-hook 'rainbow-mode)
   )
 
 ;; Do not write anything past this comment. This is where Emacs will
