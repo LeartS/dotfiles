@@ -1,0 +1,75 @@
+// Place your key bindings in this file to overwrite the defaults
+[
+    {
+        "key": "ESCAPE",
+        "command": "workbench.action.closePanel",
+        "when": "!editorTextFocus"
+    },
+    {
+        "when": "!editorTextFocus && sidebarVisible && filesExplorerFocus",
+        "key": "CTRL+Q",
+        "command": "workbench.action.toggleSidebarVisibility"
+    },
+    {
+        "key": "CTRL+E C",
+        "command": "closeMarkersNavigation"
+    },
+    {
+        "key": "ctrl+1",
+        "command": "-workbench.action.focusFirstEditorGroup"
+    },
+    {
+        "key": "CTRL+W CTRL+L",
+        "command": "workbench.action.focusNextGroup"
+    },
+    {
+        "key": "CTRL+W L",
+        "command": "workbench.action.focusNextGroup"
+    },
+    {
+        "key": "CTRL+W SHIFT+L",
+        "command": "workbench.action.focusSideBar",
+    },
+    {
+        "key": "CTRL+W CTRL+H",
+        "command": "workbench.action.focusPreviousGroup"
+    },
+    {
+        "key": "CTRL+W H",
+        "command": "workbench.action.focusPreviousGroup"
+    },
+    {
+        "key": "CTRL+W K",
+        "command": "workbench.action.focusActiveEditorGroup",
+        "when": "terminalFocus"
+    },
+    {
+        "key": "CTRL+W J",
+        "command": "workbench.action.terminal.focus"
+    },
+    {
+        "key": "CTRL+W C",
+        "command": "workbench.action.closeEditorsInGroup"
+    },
+    // File explorer shortcuts
+    {
+        "key": "C",
+        "command": "explorer.newFile",
+        "when": "filesExplorerFocus"
+    },
+    {
+        "key": "N",
+        "command": "explorer.newFolder",
+        "when": "filesExplorerFocus"
+    },
+    {
+        "key": "D",
+        "command": "moveFileToTrash",
+        "when": "filesExplorerFocus"
+    },
+    {
+        "key": "R",
+        "command": "renameFile",
+        "when": "filesExplorerFocus"
+    }
+]
