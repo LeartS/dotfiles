@@ -17,4 +17,5 @@ set -g theme_date_format "+%H:%M:%S"
 # source aliases file
 source ~/.config/fish/aliases.fish
 
-
+# add yarn global path to $PATH
+set PATH (yarn global bin) $PATH
