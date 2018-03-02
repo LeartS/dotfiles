@@ -1,6 +1,14 @@
 // Place your key bindings in this file to overwrite the defaults
 [
     {
+        "key": "ALT+LEFT",
+        "command": "workbench.action.previousEditor"
+    },
+    {
+        "key": "ALT+RIGHT",
+        "command": "workbench.action.nextEditor"
+    },
+    {
         "key": "ESCAPE",
         "command": "workbench.action.closePanel",
         "when": "!editorTextFocus"
@@ -53,23 +61,32 @@
     },
     // File explorer shortcuts
     {
-        "key": "C",
+        "key": "CTRL+C",
         "command": "explorer.newFile",
         "when": "filesExplorerFocus"
     },
     {
-        "key": "N",
+        "key": "CTRL+N",
         "command": "explorer.newFolder",
         "when": "filesExplorerFocus"
     },
     {
-        "key": "D",
+        "key": "CTRL+D",
         "command": "moveFileToTrash",
         "when": "filesExplorerFocus"
     },
     {
-        "key": "R",
+        "key": "CTRL+R",
         "command": "renameFile",
         "when": "filesExplorerFocus"
+    },
+    // Global keybidings that use CTRL+SPACE as <leader> key to emulate
+    // the spacemacs keybindings defined in the vim extension settings.
+    // These can be used as a replacement on widgets/windows where the
+    // vim extension keyboard shortcuts don't work (e.g. code UI widgets)
+    {
+        "key": "CTRL+SPACE B D",
+        "command": "workbench.action.closeActiveEditor",
+        "when": "!editorTextFocus"
     }
 ]
