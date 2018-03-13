@@ -1,0 +1,5 @@
+# Try adding monksoftware.it or webmonks.net to domains without dots
+# e.g. "ssh server1" will resolve to "ssh server1.monksoftware.it"
+CanonicalizeHostname yes
+CanonicalizeMaxDots 0
+CanonicalDomains monksoftware.it webmonks.net
