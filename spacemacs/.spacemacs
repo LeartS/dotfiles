@@ -58,9 +58,11 @@ values."
      ;; markdown
      neotree
      ;; org
-     ;; (shell :variables
-     ;;        shell-default-height 30
-     ;;        shell-default-position 'bottom)
+     (shell :variables
+            shell-default-shell 'ansi-term
+            shell-default-term-shell "/usr/bin/fish"
+            shell-default-height 30
+            shell-default-position 'bottom)
      ;; spell-checking
      syntax-checking
      themes-megapack
@@ -405,6 +407,8 @@ before packages are loaded."
   (with-eval-after-load "projectile"
     (add-to-list 'projectile-project-root-files-bottom-up "__openerp__.py")
     (add-to-list 'projectile-project-root-files-bottom-up "__manifest__.py"))
+
+  (setq system-uses-terminfo nil)
 
   ;; enable rainbow-mode by default
   ;; (not sure if it actually works)
