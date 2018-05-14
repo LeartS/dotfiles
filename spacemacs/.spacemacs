@@ -30,7 +30,9 @@ values."
    dotspacemacs-configuration-layer-path '()
    ;; List of configuration layers to load.
    dotspacemacs-configuration-layers
-   '(markdown
+   '(
+     markdown
+     shell-scripts
      yaml
      javascript
      docker
