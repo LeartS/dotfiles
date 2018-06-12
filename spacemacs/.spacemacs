@@ -411,6 +411,10 @@ before packages are loaded."
 
   (setq system-uses-terminfo nil)
 
+  ;; Max line width indicator
+  (add-hook 'prog-mode-hook 'turn-on-fci-mode)
+  (add-hook 'text-mode-hook 'turn-on-fci-mode)
+
   ;; enable rainbow-mode by default
   ;; (not sure if it actually works)
   (add-hook 'prog-mode-hook 'rainbow-mode)
