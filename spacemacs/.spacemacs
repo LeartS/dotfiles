@@ -411,6 +411,9 @@ before packages are loaded."
 
   (setq system-uses-terminfo nil)
 
+  ;; workaround for neotree bug
+  (setq helm-split-window-inside-p t)
+
   ;; Max line width indicator
   (add-hook 'prog-mode-hook 'turn-on-fci-mode)
   (add-hook 'text-mode-hook 'turn-on-fci-mode)
