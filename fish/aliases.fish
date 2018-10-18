@@ -11,6 +11,8 @@ alias heaviest-directories="du -h --max-depth 1 2>/dev/null | sort -h -r | head 
 alias l="ls -alh"
 
 # When connecting to ssh, put hostname in window title
+# and set TERM variable to screen to improve compatibility
+# with remote hosts terminal definitions
 function ssh
 	# for loop to find the first positional argument
 	# which is probably the hostname
@@ -25,5 +27,5 @@ function ssh
 			set flag "";
 		end
 	end
-	/usr/bin/ssh $argv;
+	env TERM=screen /usr/bin/ssh $argv;
 end
