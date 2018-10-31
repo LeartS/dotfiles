@@ -14,6 +14,13 @@ alias l="ls -alh"
 # and set TERM variable to screen to improve compatibility
 # with remote hosts terminal definitions
 function ssh
+	# Check if current command is ssh, if not bypass this alias.
+	# Needed to not break some commands that use
+	# ssh internally, e.g. scp completions
+	if test "$_" != "ssh"
+		/usr/bin/ssh $argv;
+		return 0;
+	end
 	# for loop to find the first positional argument
 	# which is probably the hostname
 	set flag "";
