@@ -258,16 +258,6 @@
 			]
 		},
 		{
-			"before": ["<leader>", "s", "c"],
-			"after": [],
-			"commands": [
-				{
-					"command": "keybindings.editor.clearSearchResults",
-					"args": []
-				}
-			]
-		},
-		{
 			"before": ["<leader>", "c", "l"],
 			"commands": ["editor.action.commentLine"]
 		},
