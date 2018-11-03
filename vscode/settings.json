@@ -249,13 +249,7 @@
         },
 		{
 			"before": ["<leader>", "s", "j"],
-			"after": [],
-			"commands": [
-				{
-					"command": "workbench.action.gotoSymbol",
-					"args": []
-				}
-			]
+			"commands": ["workbench.action.gotoSymbol"]
 		},
 		{
 			"before": ["<leader>", "c", "l"],
