@@ -236,6 +236,10 @@
             "commands": ["workbench.action.splitEditor"]
         },
         {
+            "before": ["<leader>", "w", "-"],
+            "commands": ["workbench.action.splitEditorDown"]
+        },
+        {
             "before": ["<leader>", "w", "d"],
             "commands": ["workbench.action.joinTwoGroups"]
         },
