@@ -101,19 +101,17 @@
             "before": ["f", "j"],
             "after": ["<Esc>"]
         }
-	],
-	"vim.otherModesKeyBindingsNonRecursive": [
+    ],
+    "vim.visualModeKeyBindings": [
         {
-            "before": [
-                "<tab>"
-            ],
-            "after": [],
-            "commands": [
-                {
-                    "command": "editor.action.formatSelection",
-                    "args": []
-                }
-            ]
+            "before": ["<tab>"],
+            "commands": ["editor.action.reindentselectedlines"]
+        }
+    ],
+    "vim.normalModeKeyBindingsNonRecursive": [
+        {
+            "before": ["<tab>"],
+            "commands": ["editor.action.reindentselectedlines"]
         },
 		// Taken from https://github.com/VSpaceCode/VSpaceCode/blob/master/settings.json
         {
