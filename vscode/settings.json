@@ -240,6 +240,10 @@
             "commands": ["workbench.action.splitEditorDown"]
         },
         {
+            "before": ["<leader>", "w", "s"],
+            "commands": ["workbench.action.toggleSidebarVisibility"]
+        },
+        {
             "before": ["<leader>", "w", "d"],
             "commands": ["workbench.action.joinTwoGroups"]
         },
