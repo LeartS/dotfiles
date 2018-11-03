@@ -1,20 +1,20 @@
 // Place your settings in this file to overwrite the default settings
 {
     "editor.fontFamily": "Ubuntu Mono",
-	"editor.minimap.enabled": false,
+    "editor.minimap.enabled": false,
     "editor.multiCursorModifier": "ctrlCmd",
-	"editor.lineNumbers": "relative",
-    "editor.renderWhitespace": "none",
+    "editor.lineNumbers": "relative",
+    "editor.renderWhitespace": "all",
     "editor.renderLineHighlight": "gutter",
-	"editor.roundedSelection": false,
-	"editor.rulers": [
-		79
+    "editor.roundedSelection": false,
+    "editor.rulers": [
+        79
     ],
     "update.channel": "none",
     "explorer.openEditors.visible": 0,
-	"files.trimTrailingWhitespace": true,
-	"telemetry.enableTelemetry": false,
-	"telemetry.enableCrashReporter": false,
+    "files.trimTrailingWhitespace": true,
+    "telemetry.enableTelemetry": false,
+    "telemetry.enableCrashReporter": false,
     "window.menuBarVisibility": "hidden",
     "workbench.colorTheme": "Solarized Light",
     "workbench.editor.showTabs": true,
@@ -86,17 +86,17 @@
         "workbench.action.terminal.toggleTerminal",
         "workbench.action.togglePanel"
     ],
-	// Vim settings
-	"vim.easymotion": true,
-	"vim.easymotionMarkerFontFamily": "Ubuntu Mono",
-	"vim.easymotionMarkerBackgroundColor": "#555555",
-	"vim.substituteGlobalFlag": true,
-	"vim.useSystemClipboard": true,
-	"vim.useCtrlKeys": true,
-	"vim.visualstar": true,
-	// Spacemacs keybindings
-	"vim.leader": "<space>",
-	"vim.insertModeKeyBindings": [
+    // Vim settings
+    "vim.easymotion": true,
+    "vim.easymotionMarkerFontFamily": "Ubuntu Mono",
+    "vim.easymotionMarkerBackgroundColor": "#555555",
+    "vim.substituteGlobalFlag": true,
+    "vim.useSystemClipboard": true,
+    "vim.useCtrlKeys": true,
+    "vim.visualstar": true,
+    // Spacemacs keybindings
+    "vim.leader": "<space>",
+    "vim.insertModeKeyBindings": [
         {
             "before": ["f", "j"],
             "after": ["<Esc>"]
@@ -113,7 +113,7 @@
             "before": ["<tab>"],
             "commands": ["editor.action.reindentselectedlines"]
         },
-		// Taken from https://github.com/VSpaceCode/VSpaceCode/blob/master/settings.json
+        // Taken from https://github.com/VSpaceCode/VSpaceCode/blob/master/settings.json
         {
             "before": ["<leader>", "<space>"],
             "commands": ["workbench.action.showCommands"],
@@ -194,11 +194,11 @@
             "before": ["<leader>", "q", "q"],
             "commands": ["workbench.action.closeWindow"]
         },
-		{
-			"before": ["<leader>", "g", "s"],
-			"commands": ["workbench.view.scm"]
-		},
-		// "Windows" (editorGroups) management commands, spacemacs-style
+        {
+            "before": ["<leader>", "g", "s"],
+            "commands": ["workbench.view.scm"]
+        },
+        // "Windows" (editorGroups) management commands, spacemacs-style
         {
             "before": ["<leader>", "w", "w"],
             "commands": ["workbench.action.focusNextGroup"]
@@ -206,15 +206,15 @@
         {
             "before": ["<leader>", "w", "W"],
             "commands": ["workbench.action.focusPreviousGroup"]
-		},
+        },
         {
             "before": ["<leader>", "w", "m"],
             "commands": ["workbench.action.minimizeOtherEditors"]
-		},
+        },
         {
             "before": ["<leader>", "w", "="],
             "commands": ["workbench.action.evenEditorWidths"]
-		},
+        },
         {
             "before": ["<leader>", "w", "l"],
             "commands": ["workbench.action.focusRightGroup"]
@@ -247,42 +247,42 @@
             "before": ["<leader>", "w", "d"],
             "commands": ["workbench.action.joinTwoGroups"]
         },
-		{
-			"before": ["<leader>", "s", "j"],
-			"commands": ["workbench.action.gotoSymbol"]
-		},
-		{
-			"before": ["<leader>", "c", "l"],
-			"commands": ["editor.action.commentLine"]
-		},
-		{
-			"before": ["<leader>", "t", "w"],
-			"commands": ["editor.action.toggleRenderWhitespace"]
-		},
-		{
-			"before": ["<leader>", "f", "t"],
-			"commands": ["workbench.files.action.showActiveFileInExplorer"]
-		},
-		{
-			"before": ["<leader>", "e", "p"],
-			"commands": ["editor.action.marker.prev"]
-		},
-		{
-			"before": ["<leader>", "e", "n"],
-			"commands": ["editor.action.marker.next"]
-		},
-		{
-			"before": ["<leader>", "e", "c"],
-			"commands": ["closeMarkersNavigation"]
-		},
-		{
-			"before": ["<leader>", "h"],
-			"commands": ["editor.action.showHover"]
-		},
-		{
-			"before": ["<leader>", "e", "l"],
-			"commands": ["workbench.action.showErrorsWarnings"]
-		}
+        {
+            "before": ["<leader>", "s", "j"],
+            "commands": ["workbench.action.gotoSymbol"]
+        },
+        {
+            "before": ["<leader>", "c", "l"],
+            "commands": ["editor.action.commentLine"]
+        },
+        {
+            "before": ["<leader>", "t", "w"],
+            "commands": ["editor.action.toggleRenderWhitespace"]
+        },
+        {
+            "before": ["<leader>", "f", "t"],
+            "commands": ["workbench.files.action.showActiveFileInExplorer"]
+        },
+        {
+            "before": ["<leader>", "e", "p"],
+            "commands": ["editor.action.marker.prev"]
+        },
+        {
+            "before": ["<leader>", "e", "n"],
+            "commands": ["editor.action.marker.next"]
+        },
+        {
+            "before": ["<leader>", "e", "c"],
+            "commands": ["closeMarkersNavigation"]
+        },
+        {
+            "before": ["<leader>", "h"],
+            "commands": ["editor.action.showHover"]
+        },
+        {
+            "before": ["<leader>", "e", "l"],
+            "commands": ["workbench.action.showErrorsWarnings"]
+        }
     ],
     "window.zoomLevel": 0,
     "extensions.autoUpdate": false,
