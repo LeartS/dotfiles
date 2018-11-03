@@ -194,6 +194,11 @@
             "before": ["<leader>", "q", "q"],
             "commands": ["workbench.action.closeWindow"]
         },
+		{
+			"before": ["<leader>", "g", "s"],
+			"commands": ["workbench.view.scm"]
+		},
+		// "Windows" (editorGroups) management commands, spacemacs-style
         {
             "before": ["<leader>", "w", "w"],
             "commands": ["workbench.action.focusNextGroup"]
