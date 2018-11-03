@@ -21,6 +21,7 @@
     "workbench.editor.showTabs": true,
     "workbench.editor.enablePreview": false,
     "workbench.sideBar.location": "right",
+    "qub-xml-vscode.telemetry.enabled": false,
     "terminal.integrated.commandsToSkipShell": [
         "editor.action.toggleTabFocusMode",
         "workbench.action.debug.continue",
