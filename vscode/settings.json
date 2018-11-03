@@ -87,7 +87,6 @@
         "workbench.action.togglePanel"
     ],
 	// Vim settings
-	"vim.cmdLineInitialColon": true,
 	"vim.easymotion": true,
 	"vim.easymotionMarkerFontFamily": "Ubuntu Mono",
 	"vim.easymotionMarkerBackgroundColor": "#555555",
