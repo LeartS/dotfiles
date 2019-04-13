@@ -90,6 +90,7 @@
     "vim.easymotion": true,
     "vim.easymotionMarkerFontFamily": "Ubuntu Mono",
     "vim.easymotionMarkerBackgroundColor": "#555555",
+    "vim.highlightedyank.enable": true,
     "vim.substituteGlobalFlag": true,
     "vim.useSystemClipboard": true,
     "vim.useCtrlKeys": true,
@@ -106,7 +107,12 @@
         {
             "before": ["<tab>"],
             "commands": ["editor.action.reindentselectedlines"]
-        }
+        },
+        {
+            "before": ["<leader>", "g", "s"],
+            "commands": ["git.stageSelectedRanges"],
+            "after": ["<esc>"]
+        },
     ],
     "vim.normalModeKeyBindingsNonRecursive": [
         {
@@ -117,6 +123,14 @@
         {
             "before": ["<leader>", "<space>"],
             "commands": ["workbench.action.showCommands"],
+        },
+        {
+            "before": ["<leader>", ":"],
+            "commands": ["vim.showQuickpickCmdLine"],
+        },
+        {
+            "before": ["<leader>", "w", "z"],
+            "commands": ["workbench.action.toggleZenMode"],
         },
         {
             "before": ["<leader>", "<tab>"],
@@ -193,10 +207,6 @@
         {
             "before": ["<leader>", "q", "q"],
             "commands": ["workbench.action.closeWindow"]
-        },
-        {
-            "before": ["<leader>", "g", "s"],
-            "commands": ["workbench.view.scm"]
         },
         // "Windows" (editorGroups) management commands, spacemacs-style
         {
@@ -297,5 +307,6 @@
     "breadcrumbs.enabled": true,
     "diffEditor.renderSideBySide": false,
     "workbench.editor.revealIfOpen": true,
-    "editor.codeLens": false
+    "editor.codeLens": false,
+    "window.newWindowDimensions": "inherit"
 }
