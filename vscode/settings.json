@@ -113,6 +113,10 @@
             "commands": ["git.stageSelectedRanges"],
             "after": ["<esc>"]
         },
+        {
+            "before": ["v"],
+            "commands": ["editor.action.smartSelect.grow"],
+        },
     ],
     "vim.normalModeKeyBindingsNonRecursive": [
         {
