@@ -1,0 +1,24 @@
+{
+  "mode": "flat",
+  "segments": [
+    "newline",
+    "virtual_env",
+    {
+      "type": "stdout",
+      "command": ["echo", "io"]
+    },
+    "ssh",
+    "cwd",
+    "git",
+    "hg",
+    "jobs",
+    "newline",
+    {
+      "type": "stdout",
+      "command": ["echo", "⌨   ▸"]
+    }
+  ],
+  "vcs": {
+    "show_symbol": true
+  }
+}
