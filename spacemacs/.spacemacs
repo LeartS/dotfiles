@@ -31,6 +31,7 @@ values."
    ;; List of configuration layers to load.
    dotspacemacs-configuration-layers
    '(
+     yaml
      elixir
      python
      elixir
@@ -43,6 +44,7 @@ values."
      (auto-completion :variables
                       auto-completion-enable-help-tooltip t)
      better-defaults
+     docker
      emacs-lisp
      firacode-ligatures
      git
@@ -53,6 +55,7 @@ values."
             shell-default-height 30
             shell-default-position 'bottom)
      ;; spell-checking
+     sql
      syntax-checking
      themes-megapack
      version-control
@@ -61,7 +64,7 @@ values."
    ;; wrapped in a layer. If you need some configuration for these
    ;; packages, then consider creating a layer. You can also put the
    ;; configuration in `dotspacemacs/user-config'.
-   dotspacemacs-additional-packages '()
+   dotspacemacs-additional-packages '(all-the-icons doom-themes)
    ;; A list of packages that cannot be updated.
    dotspacemacs-frozen-packages '()
    ;; A list of packages that will not be installed and loaded.
@@ -133,7 +136,13 @@ values."
    ;; List of themes, the first of the list is loaded when spacemacs starts.
    ;; Press <SPC> T n to cycle to the next theme in the list (works great
    ;; with 2 themes variants, one dark and one light)
-   dotspacemacs-themes '(dorsey
+   dotspacemacs-themes '(doom-vibrant
+                         doom-city-lights
+                         doom-challenger-deep
+                         doom-material
+                         doom-moonlight
+                         doom-palenight
+                         dorsey
                          spacemacs-dark
                          spacemacs-light
                          )
@@ -268,7 +277,7 @@ values."
    ;;                       text-mode
    ;;   :size-limit-kb 1000)
    ;; (default nil)
-   dotspacemacs-line-numbers nil
+   dotspacemacs-line-numbers `relative
    ;; Code folding method. Possible values are `evil' and `origami'.
    ;; (default 'evil)
    dotspacemacs-folding-method 'evil
@@ -318,8 +327,8 @@ This is the place where most of your configurations should be done. Unless it is
 explicitly specified that a variable should be set before a package is loaded,
 you should place your code here."
   (setq-default evil-escape-key-sequence "fj")
-  (setq powerline-default-separator 'arrow)
-  )
+  (doom-themes-neotree-config)
+  (setq powerline-default-separator 'arrow))
 
 ;; Do not write anything past this comment. This is where Emacs will
 ;; auto-generate custom variable definitions.
