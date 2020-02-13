@@ -328,7 +328,9 @@ explicitly specified that a variable should be set before a package is loaded,
 you should place your code here."
   (setq-default evil-escape-key-sequence "fj")
   (doom-themes-neotree-config)
-  (setq powerline-default-separator 'arrow))
+  (setq powerline-default-separator 'arrow)
+  (setq spacemacs-default-jump-handlers
+        (remove 'evil-goto-definition spacemacs-default-jump-handlers)))
 
 ;; Do not write anything past this comment. This is where Emacs will
 ;; auto-generate custom variable definitions.
