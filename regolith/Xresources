@@ -1,0 +1,5 @@
+i3-wm.workspace.auto_back_and_forth: yes
+i3-wm.binding.ws_next: <Shift>+l
+i3-wm.binding.ws_recent: Tab
+gnome.terminal.update: false
+rofi.window-format: {w} {c} {t}
