@@ -1,0 +1,39 @@
+actions:
+  vscode_install_extensions: "cat {{@@ _dotfile_abs_src @@}}/extensions.list | xargs --open-tty code --install-extension"
+config:
+  backup: true
+  banner: true
+  create: true
+  dotpath: .
+  keepdot: false
+  link_dotfile_default: nolink
+  link_on_import: nolink
+  longkey: false
+dotfiles:
+  d_polybar:
+    src: polybar
+    dst: ~/.config/polybar
+  d_regolith:
+    src: regolith
+    dst: ~/.config/regolith
+  d_git:
+    src: git
+    dst: ~/.config/git
+  d_vscode:
+    src: "vscode"
+    dst: ~/.config/Code/User/
+    instignore:
+      - "extensions.list"
+    actions:
+      - vscode_install_extensions
+profiles:
+  common:
+    dotfiles:
+     - d_git
+     - d_vscode
+  regolith:
+    dotfiles:
+      - d_polybar
+      - d_regolith
+    include:
+      - common
