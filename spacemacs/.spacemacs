@@ -32,7 +32,7 @@ This function should only modify configuration layer settings."
 
    ;; List of configuration layers to load.
    dotspacemacs-configuration-layers
-   '(
+   '(yaml
      ;; ----------------------------------------------------------------
      ;; Example of useful layers you may want to use right away.
      ;; Uncomment some layer names and press `SPC f e R' (Vim style) or
@@ -40,10 +40,12 @@ This function should only modify configuration layer settings."
      ;; ----------------------------------------------------------------
      (auto-completion :variables
                       auto-completion-tab-key-behavior 'cycle
-                      auto-completion-return-key-behavior nil)
+                      auto-completion-return-key-behavior nil
+                      auto-completion-enable-help-tooltip t)
      ;; better-defaults
      docker
-     elixir
+     (elixir :variables
+             elixir-ls-path "/opt/elixir-ls/release/")
      emacs-lisp
      ;; firacode-ligatures
      git
@@ -481,6 +483,8 @@ before packages are loaded."
   (setq-default evil-escape-key-sequence "fj")
   (doom-themes-neotree-config)
   (setq powerline-default-separator 'arrow)
+  (setq spacemacs-default-jump-handlers
+        (remove 'evil-goto-definition spacemacs-default-jump-handlers))
 
   ;; https://github.com/Profpatsch/blog/blob/master/posts/ligature-emulation-in-emacs/post.md
   (defun my-correct-symbol-bounds (pretty-alist)
@@ -559,7 +563,7 @@ This function is called at the very end of Spacemacs initialization."
  '(lsp-ui-doc-position (quote bottom))
  '(package-selected-packages
    (quote
-    (yapfify pytest pyenv-mode py-isort pippel pipenv pyvenv pip-requirements mvn meghanada maven-test-mode lsp-ui lsp-python-ms lsp-java treemacs pfuture live-py-mode importmagic epc ctable concurrent deferred groovy-mode groovy-imports pcache gradle-mode cython-mode company-lsp lsp-mode ht dash-functional company-anaconda blacken anaconda-mode pythonic yasnippet-snippets xterm-color ws-butler writeroom-mode winum which-key wgrep vterm volatile-highlights vi-tilde-fringe uuidgen use-package toc-org terminal-here symon symbol-overlay string-inflection spaceline-all-the-icons smex smeargle shell-pop restart-emacs request rainbow-delimiters popwin persp-mode pcre2el password-generator paradox overseer org-bullets open-junk-file ob-elixir neotree nameless multi-term move-text mmm-mode markdown-toc magit-svn magit-section magit-gitflow macrostep lorem-ipsum link-hint ivy-yasnippet ivy-xref ivy-rich ivy-purpose ivy-hydra indent-guide hybrid-mode hungry-delete hl-todo highlight-parentheses highlight-numbers highlight-indentation helm-make google-translate golden-ratio gitignore-templates gitignore-mode gitconfig-mode gitattributes-mode git-timemachine git-messenger git-link gh-md fuzzy font-lock+ flycheck-pos-tip flycheck-package flycheck-mix flycheck-elsa flycheck-credo flx-ido fill-column-indicator fancy-battery eyebrowse expand-region evil-visualstar evil-visual-mark-mode evil-unimpaired evil-tutor evil-textobj-line evil-surround evil-numbers evil-nerd-commenter evil-mc evil-matchit evil-magit evil-lisp-state evil-lion evil-indent-plus evil-iedit-state evil-goggles evil-exchange evil-escape evil-ediff evil-cleverparens evil-args evil-anzu eval-sexp-fu eshell-z eshell-prompt-extras esh-help elisp-slime-nav editorconfig dumb-jump dotenv-mode doom-themes dockerfile-mode docker diminish devdocs define-word counsel-projectile column-enforce-mode clean-aindent-mode centered-cursor-mode auto-yasnippet auto-highlight-symbol auto-compile alchemist aggressive-indent ace-window ace-link ac-ispell)))
+    (yaml-mode yapfify pytest pyenv-mode py-isort pippel pipenv pyvenv pip-requirements mvn meghanada maven-test-mode lsp-ui lsp-python-ms lsp-java treemacs pfuture live-py-mode importmagic epc ctable concurrent deferred groovy-mode groovy-imports pcache gradle-mode cython-mode company-lsp lsp-mode ht dash-functional company-anaconda blacken anaconda-mode pythonic yasnippet-snippets xterm-color ws-butler writeroom-mode winum which-key wgrep vterm volatile-highlights vi-tilde-fringe uuidgen use-package toc-org terminal-here symon symbol-overlay string-inflection spaceline-all-the-icons smex smeargle shell-pop restart-emacs request rainbow-delimiters popwin persp-mode pcre2el password-generator paradox overseer org-bullets open-junk-file ob-elixir neotree nameless multi-term move-text mmm-mode markdown-toc magit-svn magit-section magit-gitflow macrostep lorem-ipsum link-hint ivy-yasnippet ivy-xref ivy-rich ivy-purpose ivy-hydra indent-guide hybrid-mode hungry-delete hl-todo highlight-parentheses highlight-numbers highlight-indentation helm-make google-translate golden-ratio gitignore-templates gitignore-mode gitconfig-mode gitattributes-mode git-timemachine git-messenger git-link gh-md fuzzy font-lock+ flycheck-pos-tip flycheck-package flycheck-mix flycheck-elsa flycheck-credo flx-ido fill-column-indicator fancy-battery eyebrowse expand-region evil-visualstar evil-visual-mark-mode evil-unimpaired evil-tutor evil-textobj-line evil-surround evil-numbers evil-nerd-commenter evil-mc evil-matchit evil-magit evil-lisp-state evil-lion evil-indent-plus evil-iedit-state evil-goggles evil-exchange evil-escape evil-ediff evil-cleverparens evil-args evil-anzu eval-sexp-fu eshell-z eshell-prompt-extras esh-help elisp-slime-nav editorconfig dumb-jump dotenv-mode doom-themes dockerfile-mode docker diminish devdocs define-word counsel-projectile column-enforce-mode clean-aindent-mode centered-cursor-mode auto-yasnippet auto-highlight-symbol auto-compile alchemist aggressive-indent ace-window ace-link ac-ispell)))
  '(python-shell-interpreter "ipython3"))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
