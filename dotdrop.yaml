@@ -1,10 +1,11 @@
 actions:
-  vscode_install_extensions: "cat {{@@ _dotfile_abs_src @@}}/extensions.list | xargs --open-tty code --install-extension"
+  vscode_install_extensions: cat {{@@ _dotfile_abs_src @@}}/extensions.list | xargs
+    --open-tty code --install-extension
 config:
   backup: true
   banner: true
   create: true
-  dotpath: .
+  dotpath: ./
   keepdot: false
   link_dotfile_default: nolink
   link_on_import: nolink
@@ -20,20 +21,25 @@ dotfiles:
     src: git
     dst: ~/.config/git
   d_vscode:
-    src: "vscode"
+    src: vscode
     dst: ~/.config/Code/User/
     instignore:
-      - "extensions.list"
+    - extensions.list
     actions:
-      - vscode_install_extensions
+    - vscode_install_extensions
+  f_spacemacs:
+    src: spacemacs/.spacemacs
+    dst: ~/.spacemacs
+    chmod: '644'
 profiles:
   common:
     dotfiles:
-     - d_git
-     - d_vscode
+    - d_git
+    - d_vscode
+    - f_spacemacs
   regolith:
     dotfiles:
-      - d_polybar
-      - d_regolith
+    - d_polybar
+    - d_regolith
     include:
-      - common
+    - common

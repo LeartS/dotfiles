@@ -8,5 +8,5 @@ and copy/link them manually.
 Example dotdrop command (make sure to be in the folder containing the dotdrop.yaml file)
 
 ```bash
-dotdrop --cfg=dotdrop.yaml --profile regolith install`
+dotdrop --cfg=dotdrop.yaml --profile regolith install
 ```
