@@ -33,16 +33,7 @@ This function should only modify configuration layer settings."
    ;; List of configuration layers to load.
    dotspacemacs-configuration-layers
    '(
-     (typescript :variables
-                 typescript-backend 'lsp
-                 typescript-lsp-linter nil)
-     elm
-     erlang
-     rust
-     php
-     sql
      csv
-     yaml
      ;; ----------------------------------------------------------------
      ;; Example of useful layers you may want to use right away.
      ;; Uncomment some layer names and press `SPC f e R' (Vim style) or
@@ -59,9 +50,11 @@ This function should only modify configuration layer settings."
      (elixir :variables
              elixir-backend 'lsp
              elixir-ls-path "/opt/elixir-ls/release/")
+     elm
      emacs-lisp
-     ;; firacode-ligatures
+     erlang
      git
+     html
      (ivy :variables
           ivy-initial-inputs-alist nil
           ivy-enable-advanced-buffer-information t)
@@ -73,16 +66,31 @@ This function should only modify configuration layer settings."
      multiple-cursors
      neotree
      ;; org
+     php
      (python :variables
              python-backend 'lsp
              python-lsp-server 'mspyls)
+     rust
      (shell :variables
             shell-default-shell 'ansi-term
             shell-default-height 30
             shell-default-position 'bottom)
-     ;; spell-checking
+     (spell-checking :variables spell-checking-enable-by-default nil)
+     (sql :variables
+          sql-backend 'lsp
+          sql-lsp-sqls-workspace-config-path 'root
+          sql-capitalize-keywords t)
      syntax-checking
+     (terraform :variables terraform-backend 'lsp)
+     (typescript :variables
+                 ;; https://github.com/syl20bnr/spacemacs/issues/9047
+                 node-add-modules-path t
+                 typescript-backend 'lsp
+                 typescript-linter 'eslint
+                 typescript-lsp-linter nil)
+     (unicode-fonts :variables unicode-fonts-enable-ligatures t)
      version-control
+     yaml
      )
 
    ;; List of additional packages that will be installed without being
@@ -259,7 +267,11 @@ It should only modify the values of Spacemacs settings."
    dotspacemacs-colorize-cursor-according-to-state t
 
    ;; Default font or prioritized list of fonts.
-   dotspacemacs-default-font '("JetBrainsMonoNerdFontMono"
+   ;; dotspacemacs-default-font '("JetBrainsMonoNerdFontMono"
+   ;;                             :size 10.0
+   ;;                             :weight normal
+   ;;                             :width normal)
+   dotspacemacs-default-font '("Cascadia Code PL"
                                :size 10.0
                                :weight normal
                                :width normal)
@@ -550,51 +562,8 @@ before packages are loaded."
   (spacemacs/set-leader-keys "jj" 'dumb-jump-go)
   (spacemacs/set-leader-keys "jb" 'dumb-jump-back)
 
-  ;; https://github.com/Profpatsch/blog/blob/master/posts/ligature-emulation-in-emacs/post.md
-  (defun my-correct-symbol-bounds (pretty-alist)
-    "Prepend a TAB character to each symbol in this alist,
-this way compose-region called by prettify-symbols-mode
-will use the correct width of the symbols
-instead of the width measured by char-width."
-    (mapcar (lambda (el)
-              (setcdr el (string ?\t (cdr el)))
-              el)
-            pretty-alist))
-
-  (defun my-ligature-list (ligatures codepoint-start)
-    "Create an alist of strings to replace with
-codepoints starting from codepoint-start."
-    (let ((codepoints (-iterate '1+ codepoint-start (length ligatures))))
-      (-zip-pair ligatures codepoints)))
-
   (setq split-height-threshold nil)
   (setq split-width-threshold 160)
-
-  (setq my-firacode-ligatures
-        (let* ((ligs '("www" "**" "***" "**/" "*>" "*/" "\\\\" "\\\\\\"
-                       "{-" "[]" "::" ":::" ":=" "!!" "!=" "!==" "-}"
-                       "--" "---" "-->" "->" "->>" "-<" "-<<" "-~"
-                       "#{" "#[" "##" "###" "####" "#(" "#?" "#_" "#_("
-                       ".-" ".=" ".." "..<" "..." "?=" "??" ";;" "/*"
-                       "/**" "/=" "/==" "/>" "//" "///" "&&" "||" "||="
-                       "|=" "|>" "^=" "$>" "++" "+++" "+>" "=:=" "=="
-                       "===" "==>" "=>" "=>>" "<=" "=<<" "=/=" ">-" ">="
-                       ">=>" ">>" ">>-" ">>=" ">>>" "<*" "<*>" "<|" "<|>"
-                       "<$" "<$>" "<!--" "<-" "<--" "<->" "<+" "<+>" "<="
-                       "<==" "<=>" "<=<" "<>" "<<" "<<-" "<<=" "<<<" "<~"
-                       "<~~" "</" "</>" "~@" "~-" "~=" "~>" "~~" "~~>" "%%"
-                       "x" ":" "+" "+" "*")))
-          (my-correct-symbol-bounds (my-ligature-list ligs #Xe100))))
-
-  (defun my-set-firacode-ligatures ()
-    "Add hasklig ligatures for use with prettify-symbols-mode."
-    (setq prettify-symbols-alist
-          (append my-firacode-ligatures prettify-symbols-alist))
-    (prettify-symbols-mode))
-
-  ;; when entering a programming-mode, enable ligatures
-  ;; (add-hook 'prog-mode-hook 'my-set-firacode-ligatures)
-
   )
 
 ;; Do not write anything past this comment. This is where Emacs will
@@ -630,10 +599,12 @@ This function is called at the very end of Spacemacs initialization."
  '(jdee-db-active-breakpoint-face-colors (cons "#1c1f24" "#51afef"))
  '(jdee-db-requested-breakpoint-face-colors (cons "#1c1f24" "#7bc275"))
  '(jdee-db-spec-breakpoint-face-colors (cons "#1c1f24" "#484854"))
+ '(js-indent-level 2)
+ '(lsp-elixir-mix-env "dev")
  '(lsp-ui-doc-position 'bottom)
  '(objed-cursor-color "#ff665c")
  '(package-selected-packages
-   '(web-mode typescript-mode import-js grizzl emmet-mode add-node-modules-path doom-modeline shrink-path flycheck-elm elm-test-runner elm-mode reformatter erlang toml-mode flycheck-rust lsp-treemacs bui rust-mode git-gutter-fringe+ fringe-helper git-gutter+ browse-at-remote phpunit phpcbf php-extras php-auto-yasnippets helm-gtags helm helm-core ggtags geben drupal-mode counsel-gtags company-phpactor phpactor composer php-runtime company-php ac-php-core xcscope php-mode sqlup-mode sql-indent csv-mode org-plus-contrib yaml-mode yapfify pytest pyenv-mode py-isort pippel pipenv pyvenv pip-requirements mvn meghanada maven-test-mode lsp-ui lsp-python-ms lsp-java treemacs pfuture live-py-mode importmagic epc ctable concurrent deferred groovy-mode groovy-imports pcache gradle-mode cython-mode company-lsp lsp-mode ht dash-functional company-anaconda blacken anaconda-mode pythonic yasnippet-snippets xterm-color ws-butler writeroom-mode winum which-key wgrep vterm volatile-highlights vi-tilde-fringe uuidgen use-package toc-org terminal-here symon symbol-overlay string-inflection spaceline-all-the-icons smex smeargle shell-pop restart-emacs request rainbow-delimiters popwin persp-mode pcre2el password-generator paradox overseer org-bullets open-junk-file ob-elixir neotree nameless multi-term move-text mmm-mode markdown-toc magit-svn magit-section magit-gitflow macrostep lorem-ipsum link-hint ivy-yasnippet ivy-xref ivy-rich ivy-purpose ivy-hydra indent-guide hybrid-mode hungry-delete hl-todo highlight-parentheses highlight-numbers highlight-indentation helm-make google-translate golden-ratio gitignore-templates gitignore-mode gitconfig-mode gitattributes-mode git-timemachine git-messenger git-link gh-md fuzzy font-lock+ flycheck-pos-tip flycheck-package flycheck-mix flycheck-elsa flycheck-credo flx-ido fill-column-indicator fancy-battery eyebrowse expand-region evil-visualstar evil-visual-mark-mode evil-unimpaired evil-tutor evil-textobj-line evil-surround evil-numbers evil-nerd-commenter evil-mc evil-matchit evil-magit evil-lisp-state evil-lion evil-indent-plus evil-iedit-state evil-goggles evil-exchange evil-escape evil-ediff evil-cleverparens evil-args evil-anzu eval-sexp-fu eshell-z eshell-prompt-extras esh-help elisp-slime-nav editorconfig dumb-jump dotenv-mode doom-themes dockerfile-mode docker diminish devdocs define-word counsel-projectile column-enforce-mode clean-aindent-mode centered-cursor-mode auto-yasnippet auto-highlight-symbol auto-compile alchemist aggressive-indent ace-window ace-link ac-ispell))
+   '(tagedit slim-mode scss-mode sass-mode pug-mode impatient-mode htmlize haml-mode counsel-css company-web web-completion-data web-mode typescript-mode import-js grizzl emmet-mode add-node-modules-path doom-modeline shrink-path flycheck-elm elm-test-runner elm-mode reformatter erlang toml-mode flycheck-rust lsp-treemacs bui rust-mode git-gutter-fringe+ fringe-helper git-gutter+ browse-at-remote phpunit phpcbf php-extras php-auto-yasnippets helm-gtags helm helm-core ggtags geben drupal-mode counsel-gtags company-phpactor phpactor composer php-runtime company-php ac-php-core xcscope php-mode sqlup-mode sql-indent csv-mode org-plus-contrib yaml-mode yapfify pytest pyenv-mode py-isort pippel pipenv pyvenv pip-requirements mvn meghanada maven-test-mode lsp-ui lsp-python-ms lsp-java treemacs pfuture live-py-mode importmagic epc ctable concurrent deferred groovy-mode groovy-imports pcache gradle-mode cython-mode company-lsp lsp-mode ht dash-functional company-anaconda blacken anaconda-mode pythonic yasnippet-snippets xterm-color ws-butler writeroom-mode winum which-key wgrep vterm volatile-highlights vi-tilde-fringe uuidgen use-package toc-org terminal-here symon symbol-overlay string-inflection spaceline-all-the-icons smex smeargle shell-pop restart-emacs request rainbow-delimiters popwin persp-mode pcre2el password-generator paradox overseer org-bullets open-junk-file ob-elixir neotree nameless multi-term move-text mmm-mode markdown-toc magit-svn magit-section magit-gitflow macrostep lorem-ipsum link-hint ivy-yasnippet ivy-xref ivy-rich ivy-purpose ivy-hydra indent-guide hybrid-mode hungry-delete hl-todo highlight-parentheses highlight-numbers highlight-indentation helm-make google-translate golden-ratio gitignore-templates gitignore-mode gitconfig-mode gitattributes-mode git-timemachine git-messenger git-link gh-md fuzzy font-lock+ flycheck-pos-tip flycheck-package flycheck-mix flycheck-elsa flycheck-credo flx-ido fill-column-indicator fancy-battery eyebrowse expand-region evil-visualstar evil-visual-mark-mode evil-unimpaired evil-tutor evil-textobj-line evil-surround evil-numbers evil-nerd-commenter evil-mc evil-matchit evil-magit evil-lisp-state evil-lion evil-indent-plus evil-iedit-state evil-goggles evil-exchange evil-escape evil-ediff evil-cleverparens evil-args evil-anzu eval-sexp-fu eshell-z eshell-prompt-extras esh-help elisp-slime-nav editorconfig dumb-jump dotenv-mode doom-themes dockerfile-mode docker diminish devdocs define-word counsel-projectile column-enforce-mode clean-aindent-mode centered-cursor-mode auto-yasnippet auto-highlight-symbol auto-compile alchemist aggressive-indent ace-window ace-link ac-ispell))
  '(python-shell-interpreter "ipython3" t)
  '(rustic-ansi-faces
    ["#242730" "#ff665c" "#7bc275" "#FCCE7B" "#51afef" "#C57BDB" "#5cEfFF" "#bbc2cf"])
