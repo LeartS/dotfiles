@@ -1,9 +1,3 @@
 [submodule "tmux/.tmux/plugins/tpm"]
 	path = tmux/.tmux/plugins/tpm
 	url = https://github.com/tmux-plugins/tpm
-[submodule "regolith/rofi-calc"]
-	path = regolith/rofi-calc
-	url = https://github.com/svenstaro/rofi-calc
-[submodule "regolith/rofi-emoji"]
-	path = regolith/rofi-emoji
-	url = https://github.com/Mange/rofi-emoji

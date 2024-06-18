@@ -11,12 +11,6 @@ config:
   link_on_import: nolink
   longkey: false
 dotfiles:
-  d_polybar:
-    src: polybar
-    dst: ~/.config/polybar
-  d_regolith:
-    src: regolith
-    dst: ~/.config/regolith
   d_git:
     src: git
     dst: ~/.config/git
@@ -37,9 +31,3 @@ profiles:
     - d_git
     - d_vscode
     - f_spacemacs
-  regolith:
-    dotfiles:
-    - d_polybar
-    - d_regolith
-    include:
-    - common
