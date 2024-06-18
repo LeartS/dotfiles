@@ -1,33 +1,22 @@
-actions:
-  vscode_install_extensions: cat {{@@ _dotfile_abs_src @@}}/extensions.list | xargs
-    --open-tty code --install-extension
 config:
   backup: true
   banner: true
   create: true
-  dotpath: ./
+  dotpath: dotfiles
   keepdot: false
   link_dotfile_default: nolink
   link_on_import: nolink
   longkey: false
 dotfiles:
-  d_git:
-    src: git
-    dst: ~/.config/git
-  d_vscode:
-    src: vscode
-    dst: ~/.config/Code/User/
-    instignore:
-    - extensions.list
-    actions:
-    - vscode_install_extensions
-  f_spacemacs:
-    src: spacemacs/.spacemacs
-    dst: ~/.spacemacs
+  f_starship.toml:
+    src: config/starship.toml
+    dst: ~/.config/starship.toml
+  f_gitconfig:
+    src: gitconfig
+    dst: ~/.gitconfig
     chmod: '644'
 profiles:
   common:
     dotfiles:
-    - d_git
-    - d_vscode
-    - f_spacemacs
+    - f_starship.toml
+    - f_gitconfig

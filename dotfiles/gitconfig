@@ -1,0 +1,20 @@
+[user]
+	email = learts92@gmail.com
+	name = Leonardo Donelli
+	signingkey = 3DF8543D0151E358
+[help]
+	autocorrect = 10
+[core]
+	editor = nvim
+[hub]
+	protocol = ssh
+[alias]
+	tree = log --graph --decorate --pretty=oneline --abbrev-commit --all
+[color]
+	ui = true
+[commit]
+	gpgsign = true
+[gpg]
+	program = gpg
+[init]
+	defaultBranch = main
