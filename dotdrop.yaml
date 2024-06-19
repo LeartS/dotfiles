@@ -27,7 +27,5 @@ profiles:
     dotfiles:
     - f_starship.toml
     - f_gitconfig
-  xps:
-    dotfiles:
     - f_bashrc
     - d_bashrc.d
