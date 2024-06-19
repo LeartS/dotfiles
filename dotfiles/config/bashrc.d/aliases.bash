@@ -1,6 +1,6 @@
 alias askai='sgpt --no-interaction'
 alias bashly='docker run --rm -it --user $(id -u):$(id -g) --volume "$PWD:/app" dannyben/bashly'
-alias myip="dig +short myip.opendns.com @resolver1.opendns.com"
+alias myip="curl --silent https://myipv4.p1.opendns.com/get_my_ip | jq --raw-output '.ip'"
 alias heaviest-directories="du -h --max-depth 1 2>/dev/null | sort -h -r | head -n 20"
 alias ls="ls --color=auto"
 alias l="ls -l --almost-all --human-readable --color=auto"
