@@ -15,8 +15,19 @@ dotfiles:
     src: gitconfig
     dst: ~/.gitconfig
     chmod: '644'
+  f_bashrc:
+    src: bashrc
+    dst: ~/.bashrc
+    chmod: '644'
+  d_bashrc.d:
+    src: config/bashrc.d
+    dst: ~/.config/bashrc.d
 profiles:
   common:
     dotfiles:
     - f_starship.toml
     - f_gitconfig
+  xps:
+    dotfiles:
+    - f_bashrc
+    - d_bashrc.d
