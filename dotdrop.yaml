@@ -22,6 +22,9 @@ dotfiles:
   d_bashrc.d:
     src: config/bashrc.d
     dst: ~/.config/bashrc.d
+  f_inputrc:
+    src: inputrc
+    dst: ~/.inputrc
 profiles:
   common:
     dotfiles:
@@ -29,3 +32,4 @@ profiles:
     - f_gitconfig
     - f_bashrc
     - d_bashrc.d
+    - f_inputrc

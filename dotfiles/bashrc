@@ -83,8 +83,6 @@ if ! shopt -oq posix; then
   fi
 fi
 
-set -o vi
-
 source ~/.config/bashrc.d/hstr.bash
 source ~/.config/bashrc.d/aliases.bash
 
