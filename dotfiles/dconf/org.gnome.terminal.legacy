@@ -1,0 +1,107 @@
+[/]
+default-show-menubar=false
+headerbar=@mb false
+menu-accelerator-enabled=false
+schema-version=uint32 3
+theme-variant='system'
+
+[profiles:]
+default='d140e215-cc33-4766-b22e-9eda8c5a9bca'
+list=['ff002ef5-e62d-4663-ac10-396ea9c564ac', 'de8a9081-8352-4ce4-9519-5de655ad9361', '5083e06b-024e-46be-9cd2-892b814f1fc8', '71a9971e-e829-43a9-9b2f-4565c855d664', '95894cfd-82f7-430d-af6e-84d168bc34f5', 'd140e215-cc33-4766-b22e-9eda8c5a9bca'] 
+
+# Custom theme created by me
+[profiles:/:ff002ef5-e62d-4663-ac10-396ea9c564ac]
+audible-bell=false
+background-color='rgb(236,227,213)'
+font='JetBrainsMono Nerd Font 12'
+palette=['rgb(51,63,64)', 'rgb(176,109,113)', 'rgb(38,162,105)', 'rgb(162,115,76)', 'rgb(18,72,139)', 'rgb(163,71,186)', 'rgb(42,161,179)', 'rgb(208,207,204)', 'rgb(69,77,77)', 'rgb(246,97,81)', 'rgb(51,218,122)', 'rgb(233,173,12)', 'rgb(42,123,222)', 'rgb(192,97,203)', 'rgb(51,199,222)', 'rgb(255,255,255)']
+use-system-font=false
+use-theme-colors=false
+visible-name='Elegant Light'
+
+# >>>> CATPPUCCIN THEMES https://github.com/catppuccin/gnome-terminal
+
+[profiles:/:de8a9081-8352-4ce4-9519-5de655ad9361]
+background-color='#eff1f5'
+cursor-background-color='#dc8a78'
+cursor-colors-set=true
+cursor-foreground-color='#eff1f5'
+font='JetBrainsMono Nerd Font 12'
+foreground-color='#4c4f69'
+highlight-background-color='#eff1f5'
+highlight-colors-set=true
+highlight-foreground-color='#acb0be'
+palette=['#5c5f77', '#d20f39', '#40a02b', '#df8e1d', '#1e66f5', '#ea76cb', '#179299', '#acb0be', '#6c6f85', '#d20f39', '#40a02b', '#df8e1d', '#1e66f5', '#ea76cb', '#179299', '#bcc0cc']
+use-system-font=false
+use-theme-colors=false
+visible-name='Catppuccin Latte'
+
+[profiles:/:5083e06b-024e-46be-9cd2-892b814f1fc8]
+background-color='#24273a'
+cursor-background-color='#f4dbd6'
+cursor-colors-set=true
+cursor-foreground-color='#24273a'
+font='JetBrainsMono Nerd Font 12'
+foreground-color='#cad3f5'
+highlight-background-color='#24273a'
+highlight-colors-set=true
+highlight-foreground-color='#5b6078'
+palette=['#494d64', '#ed8796', '#a6da95', '#eed49f', '#8aadf4', '#f5bde6', '#8bd5ca', '#b8c0e0', '#5b6078', '#ed8796', '#a6da95', '#eed49f', '#8aadf4', '#f5bde6', '#8bd5ca', '#a5adcb']
+use-system-font=false
+use-theme-colors=false
+visible-name='Catppuccin Macchiato'
+
+[profiles:/:71a9971e-e829-43a9-9b2f-4565c855d664]
+background-color='#303446'
+cursor-background-color='#f2d5cf'
+cursor-colors-set=true
+cursor-foreground-color='#303446'
+font='JetBrainsMono Nerd Font 12'
+foreground-color='#c6d0f5'
+highlight-background-color='#303446'
+highlight-colors-set=true
+highlight-foreground-color='#626880'
+palette=['#51576d', '#e78284', '#a6d189', '#e5c890', '#8caaee', '#f4b8e4', '#81c8be', '#b5bfe2', '#626880', '#e78284', '#a6d189', '#e5c890', '#8caaee', '#f4b8e4', '#81c8be', '#a5adce']
+use-system-font=false
+use-theme-colors=false
+visible-name='Catppuccin Frappe'
+
+[profiles:/:95894cfd-82f7-430d-af6e-84d168bc34f5]
+background-color='#1e1e2e'
+cursor-background-color='#f5e0dc'
+cursor-colors-set=true
+cursor-foreground-color='#1e1e2e'
+font='JetBrainsMono Nerd Font 12'
+foreground-color='#cdd6f4'
+highlight-background-color='#1e1e2e'
+highlight-colors-set=true
+highlight-foreground-color='#585b70'
+palette=['#45475a', '#f38ba8', '#a6e3a1', '#f9e2af', '#89b4fa', '#f5c2e7', '#94e2d5', '#bac2de', '#585b70', '#f38ba8', '#a6e3a1', '#f9e2af', '#89b4fa', '#f5c2e7', '#94e2d5', '#a6adc8']
+use-system-font=false
+use-theme-colors=false
+visible-name='Catppuccin Mocha'
+
+# <<<< CATPPUCCIN THEMES https://github.com/catppuccin/gnome-terminal
+
+[profiles:/:d140e215-cc33-4766-b22e-9eda8c5a9bca]
+audible-bell=false
+background-color='#2D2D2D2D2D2D'
+bold-color='#D4D4D4D4D4D4'
+bold-color-same-as-fg=true
+cursor-background-color='rgb(216,222,233)'
+cursor-colors-set=true
+cursor-foreground-color='rgb(59,66,82)'
+font='JetBrainsMono Nerd Font 12'
+foreground-color='#D4D4D4D4D4D4'
+highlight-background-color='rgb(136,192,208)'
+highlight-colors-set=true
+highlight-foreground-color='rgb(46,52,64)'
+nord-gnome-terminal-version='0.1.0'
+palette=['#646464646464', '#F5F58E8E8E8E', '#A9A9D3D3ABAB', '#FEFED3D37E7E', '#7A7AABABD4D4', '#D6D6ADADD5D5', '#7979D4D4D5D5', '#D4D4D4D4D4D4', '#646464646464', '#F5F58E8E8E8E', '#A9A9D3D3ABAB', '#FEFED3D37E7E', '#7A7AABABD4D4', '#D6D6ADADD5D5', '#7979D4D4D5D5', '#D4D4D4D4D4D4']
+use-system-font=false
+use-theme-background=false
+use-theme-colors=false
+use-theme-transparency=false
+use-transparent-background=false
+visible-name='Chalk'
+
