@@ -25,6 +25,9 @@ dotfiles:
   f_inputrc:
     src: inputrc
     dst: ~/.inputrc
+  d_zellij:
+    src: config/zellij
+    dst: ~/.config/zellij
 profiles:
   common:
     dotfiles:
@@ -33,3 +36,4 @@ profiles:
     - f_bashrc
     - d_bashrc.d
     - f_inputrc
+    - d_zellij
