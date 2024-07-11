@@ -1,0 +1,116 @@
+[
+  {
+    "bindings": {
+      "ctrl-k": "menu::SelectPrev",
+      "ctrl-j": "menu::SelectNext"
+    }
+  },
+  // Disable all chords that start with ctrl-k,
+  // we want it to work as menu::SelectPrev with no lag
+  // (Zed would wait to see if the chord would be completed)
+  {
+    "context": "Editor",
+    "bindings": {
+      "ctrl-k ctrl-r": null,
+      "ctrl-k ctrl-d": null,
+      "ctrl-k ctrl-shift-d": null,
+      "ctrl-k ctrl-i": null,
+      "ctrl-k r": null,
+      "ctrl-k p": null,
+      "ctrl-k v": null,
+      "alt-left": "pane::ActivatePrevItem",
+      "alt-right": "pane::ActivateNextItem"
+    }
+  },
+  {
+    "context": "Pane",
+    "bindings": {
+      "ctrl-k u": null,
+      "ctrl-k w": null,
+      "ctrl-k up": null,
+      "ctrl-k down": null,
+      "ctrl-k left": null,
+      "ctrl-k right": null
+    }
+  },
+  {
+    "context": "Workspace",
+    "bindings": {
+      "ctrl-k s": null,
+      "ctrl-k ctrl-s": null,
+      "ctrl-k ctrl-t": null,
+      "ctrl-k m": null,
+      "ctrl-k ctrl-left": null,
+      "ctrl-k ctrl-right": null,
+      "ctrl-k ctrl-up": null,
+      "ctrl-k ctrl-down": null,
+      "ctrl-k shift-left": null,
+      "ctrl-k shift-right": null,
+      "ctrl-k shift-up": null,
+      "ctrl-k shift-down": null
+    }
+  },
+  {
+    "context": "Editor && (showing_code_actions || showing_completions)",
+    "bindings": {
+      "ctrl-k": "editor::ContextMenuPrev",
+      "ctrl-j": "editor::ContextMenuNext"
+    }
+  },
+  {
+    "context": "Editor && (vim_mode == normal || vim_mode == visual) && !VimWaiting && !menu",
+    "bindings": {
+      // put key-bindings here if you want them to work in normal & visual mode
+      "space space": "command_palette::Toggle",
+      "space tab": ["workspace::SendKeystrokes", "space b b enter"],
+      "space f s": "workspace::Save",
+      "space f f": "file_finder::Toggle",
+      "space f t": "project_panel::ToggleFocus",
+      "space f T": "pane::RevealInProjectPanel",
+      "space w /": "pane::SplitRight",
+      "space w -": "pane::SplitDown",
+      "space w d": "pane::CloseActiveItem",
+      "space w h": ["workspace::ActivatePaneInDirection", "Left"],
+      "space w l": ["workspace::ActivatePaneInDirection", "Right"],
+      "space w k": ["workspace::ActivatePaneInDirection", "Up"],
+      "space w j": ["workspace::ActivatePaneInDirection", "Down"],
+      "space w H": ["workspace::SwapPaneInDirection", "Left"],
+      "space w L": ["workspace::SwapPaneInDirection", "Right"],
+      "space w K": ["workspace::SwapPaneInDirection", "Up"],
+      "space w J": ["workspace::SwapPaneInDirection", "Down"],
+      "space e n": "editor::GoToDiagnostic",
+      "space e N": "editor::GoToPrevDiagnostic",
+      "space b b": "tab_switcher::Toggle",
+      "space b s": "outline::Toggle",
+      "space b l": "pane::ActivateNextItem",
+      "space b h": "pane::ActivatePrevItem",
+      "space p s": "project_symbols::Toggle"
+    }
+  },
+  {
+    "context": "Editor && vim_mode == visual && !VimWaiting && !VimObject",
+    "bindings": {
+      "s": [
+        "vim::PushOperator",
+        {
+          "AddSurrounds": {}
+        }
+      ]
+    }
+  },
+  {
+    "context": "ProjectPanel",
+    "bindings": {
+      "space w h": ["workspace::ActivatePaneInDirection", "Left"],
+      "space w l": ["workspace::ActivatePaneInDirection", "Right"],
+      "ctrl-w h": ["workspace::ActivatePaneInDirection", "Left"],
+      "ctrl-w l": ["workspace::ActivatePaneInDirection", "Right"]
+    }
+  },
+  {
+    "context": "ProjectPanel && not_editing",
+    "bindings": {
+      "c": "project_panel::NewFile"
+    }
+  }
+]

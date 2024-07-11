@@ -28,6 +28,9 @@ dotfiles:
   d_zellij:
     src: config/zellij
     dst: ~/.config/zellij
+  d_zed:
+    src: config/zed
+    dst: ~/.config/zed
 profiles:
   common:
     dotfiles:
@@ -37,3 +40,4 @@ profiles:
     - d_bashrc.d
     - f_inputrc
     - d_zellij
+    - d_zed
