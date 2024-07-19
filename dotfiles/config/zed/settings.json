@@ -7,20 +7,40 @@
 // custom settings, run the `open default settings` command
 // from the command palette or from `Zed` application menu.
 {
+  "features": {
+    "inline_completion_provider": "none"
+  },
+  "assistant": {
+    "version": "1",
+    "provider": {
+      "default_model": "gpt-4o",
+      "name": "openai",
+      "available_models": []
+    }
+  },
   "telemetry": {
     "diagnostics": false
   },
   "vim_mode": true,
   "base_keymap": "VSCode",
   "ui_font_size": 16,
-  "buffer_font_size": 16,
+  "buffer_font_size": 12,
   "theme": {
     "mode": "system",
-    "light": "One Light",
-    "dark": "Solarized Light"
+    "light": "Solarized Light",
+    "dark": "Rosé Pine"
+  },
+  "git": {
+    "git_gutter": "tracked_files",
+    "inline_blame": {
+      "enabled": false
+    }
   },
   "relative_line_numbers": true,
   "project_panel": {
     "dock": "right"
+  },
+  "terminal": {
+    "font_family": "Hack Nerd Font Mono"
   }
 }

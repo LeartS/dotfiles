@@ -31,6 +31,11 @@ dotfiles:
   d_zed:
     src: config/zed
     dst: ~/.config/zed
+    upignore:
+    - "*/conversations/*"
+    - "*/embeddings/*"
+    - "*/prompts/*"
+    - "*/.tmp*"
 profiles:
   common:
     dotfiles:

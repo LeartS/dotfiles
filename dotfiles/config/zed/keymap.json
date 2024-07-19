@@ -36,6 +36,7 @@
   {
     "context": "Workspace",
     "bindings": {
+      "ctrl-'": "terminal_panel::ToggleFocus",
       "ctrl-k s": null,
       "ctrl-k ctrl-s": null,
       "ctrl-k ctrl-t": null,
@@ -48,6 +49,43 @@
       "ctrl-k shift-right": null,
       "ctrl-k shift-up": null,
       "ctrl-k shift-down": null
+    }
+  },
+  {
+    "context": "Workspace && not_editing",
+    "bindings": {
+      "space space": "command_palette::Toggle",
+      "space f f": "file_finder::Toggle",
+      "space f t": "project_panel::ToggleFocus",
+      "space w /": "pane::SplitRight",
+      "space w -": "pane::SplitDown",
+      "space w d": "pane::CloseAllItems",
+      "space w h": ["workspace::ActivatePaneInDirection", "Left"],
+      "space w l": ["workspace::ActivatePaneInDirection", "Right"],
+      "space w k": ["workspace::ActivatePaneInDirection", "Up"],
+      "space w j": ["workspace::ActivatePaneInDirection", "Down"],
+      "space b b": "tab_switcher::Toggle",
+      "space b l": "pane::ActivateNextItem",
+      "space b h": "pane::ActivatePrevItem",
+      "space b d": "pane::CloseActiveItem",
+      "space p s": "project_symbols::Toggle",
+      "space p f": "file_finder::Toggle",
+      "space p /": "workspace::NewSearch",
+      "space p p": "projects::OpenRecent",
+      "space u r": "workspace::ToggleRightDock",
+      "space u p": "project_panel::ToggleFocus",
+      "space u a": "assistant::ToggleFocus",
+      "space u n": "notification_panel::ToggleFocus",
+      "space u b": "workspace::ToggleBottomDock"
+    }
+  },
+  {
+    "context": "Terminal",
+    "bindings": {
+      "ctrl-w h": ["workspace::ActivatePaneInDirection", "Left"],
+      "ctrl-w l": ["workspace::ActivatePaneInDirection", "Right"],
+      "ctrl-w k": ["workspace::ActivatePaneInDirection", "Up"],
+      "ctrl-w j": ["workspace::ActivatePaneInDirection", "Down"]
     }
   },
   {
@@ -69,7 +107,7 @@
       "space f T": "pane::RevealInProjectPanel",
       "space w /": "pane::SplitRight",
       "space w -": "pane::SplitDown",
-      "space w d": "pane::CloseActiveItem",
+      "space w d": "pane::CloseAllItems",
       "space w h": ["workspace::ActivatePaneInDirection", "Left"],
       "space w l": ["workspace::ActivatePaneInDirection", "Right"],
       "space w k": ["workspace::ActivatePaneInDirection", "Up"],
@@ -84,7 +122,16 @@
       "space b s": "outline::Toggle",
       "space b l": "pane::ActivateNextItem",
       "space b h": "pane::ActivatePrevItem",
-      "space p s": "project_symbols::Toggle"
+      "space b d": "pane::CloseActiveItem",
+      "space p s": "project_symbols::Toggle",
+      "space p f": "file_finder::Toggle",
+      "space p /": "workspace::NewSearch",
+      "space p p": "projects::OpenRecent",
+      "space u r": "workspace::ToggleRightDock",
+      "space u b": "workspace::ToggleBottomDock",
+      "space u p": "project_panel::ToggleFocus",
+      "space u a": "assistant::ToggleFocus",
+      "space u n": "notification_panel::ToggleFocus"
     }
   },
   {
