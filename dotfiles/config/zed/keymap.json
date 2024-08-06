@@ -101,10 +101,12 @@
       // put key-bindings here if you want them to work in normal & visual mode
       "space space": "command_palette::Toggle",
       "space tab": ["workspace::SendKeystrokes", "space b b enter"],
+      /// space f: files
       "space f s": "workspace::Save",
       "space f f": "file_finder::Toggle",
       "space f t": "project_panel::ToggleFocus",
       "space f T": "pane::RevealInProjectPanel",
+      /// space w: panes (in emacs terminology: windows)
       "space w /": "pane::SplitRight",
       "space w -": "pane::SplitDown",
       "space w d": "pane::CloseAllItems",
@@ -116,22 +118,39 @@
       "space w L": ["workspace::SwapPaneInDirection", "Right"],
       "space w K": ["workspace::SwapPaneInDirection", "Up"],
       "space w J": ["workspace::SwapPaneInDirection", "Down"],
+      "space w z": "workspace::ToggleZoom",
+      /// space e: errors/diagnostics
       "space e n": "editor::GoToDiagnostic",
       "space e N": "editor::GoToPrevDiagnostic",
+      "space e p": "editor::GoToPrevDiagnostic",
+      /// space b: items (in emacs terminology: buffers)
       "space b b": "tab_switcher::Toggle",
       "space b s": "outline::Toggle",
       "space b l": "pane::ActivateNextItem",
       "space b h": "pane::ActivatePrevItem",
       "space b d": "pane::CloseActiveItem",
+      /// space p: Project
       "space p s": "project_symbols::Toggle",
       "space p f": "file_finder::Toggle",
       "space p /": "workspace::NewSearch",
       "space p p": "projects::OpenRecent",
+      /// space u: Panels and other UI elements
       "space u r": "workspace::ToggleRightDock",
       "space u b": "workspace::ToggleBottomDock",
       "space u p": "project_panel::ToggleFocus",
       "space u a": "assistant::ToggleFocus",
-      "space u n": "notification_panel::ToggleFocus"
+      "space u n": "notification_panel::ToggleFocus",
+      /// space g: VCS (git)
+      "space g u": "editor::RevertSelectedHunks",
+      "space g p": "editor::GoToPrevHunk",
+      "space g n": "editor::GoToHunk",
+      /// space m: multi-cursor
+      "space m j": "editor::AddSelectionBelow",
+      "space m k": "editor::AddSelectionAbove",
+      "space m p": "editor::SelectPrevious",
+      "space m n": "editor::SelectNext",
+      "space m a": "editor::SelectAllMatches",
+      "space m /": "editor::SelectAllMatches"
     }
   },
   {
@@ -146,6 +165,12 @@
     }
   },
   {
+    "context": "Editor && vim_mode == insert",
+    "bindings": {
+      "ctrl-l": "editor::ShowCompletions"
+    }
+  },
+  {
     "context": "ProjectPanel",
     "bindings": {
       "space w h": ["workspace::ActivatePaneInDirection", "Left"],
@@ -157,7 +182,8 @@
   {
     "context": "ProjectPanel && not_editing",
     "bindings": {
-      "c": "project_panel::NewFile"
+      "c": "project_panel::NewFile",
+      "r": "project_panel::Rename"
     }
   }
 ]
