@@ -1,58 +1,50 @@
 [
   {
     "bindings": {
-      "ctrl-k": "menu::SelectPrev",
+      "ctrl-k": "menu::SelectPrevious",
       "ctrl-j": "menu::SelectNext"
     }
   },
-  // Disable all chords that start with ctrl-k,
-  // we want it to work as menu::SelectPrev with no lag
-  // (Zed would wait to see if the chord would be completed)
   {
     "context": "Editor",
     "bindings": {
-      "ctrl-k ctrl-r": null,
-      "ctrl-k ctrl-d": null,
-      "ctrl-k ctrl-shift-d": null,
-      "ctrl-k ctrl-i": null,
-      "ctrl-k r": null,
-      "ctrl-k p": null,
-      "ctrl-k v": null,
-      "alt-left": "pane::ActivatePrevItem",
-      "alt-right": "pane::ActivateNextItem"
-    }
-  },
-  {
-    "context": "Pane",
-    "bindings": {
-      "ctrl-k u": null,
-      "ctrl-k w": null,
-      "ctrl-k up": null,
-      "ctrl-k down": null,
-      "ctrl-k left": null,
-      "ctrl-k right": null
+      "alt-left": "pane::ActivatePreviousItem",
+      "alt-right": "pane::ActivateNextItem",
+      // Use "space g "space g +" / "space g -" instead
+      "cmd-shift-y": null,
+      "cmd-alt-y": null
     }
   },
   {
     "context": "Workspace",
     "bindings": {
       "ctrl-'": "terminal_panel::ToggleFocus",
-      "ctrl-k s": null,
-      "ctrl-k ctrl-s": null,
-      "ctrl-k ctrl-t": null,
-      "ctrl-k m": null,
-      "ctrl-k ctrl-left": null,
-      "ctrl-k ctrl-right": null,
-      "ctrl-k ctrl-up": null,
-      "ctrl-k ctrl-down": null,
-      "ctrl-k shift-left": null,
-      "ctrl-k shift-right": null,
-      "ctrl-k shift-up": null,
-      "ctrl-k shift-down": null
+      "ctrl+w /": "pane::SplitRight",
+      "ctrl+w -": "pane::SplitDown",
+      "ctrl+w d": "pane::CloseAllItems",
+      "ctrl+w h": "workspace::ActivatePaneLeft",
+      "ctrl+w l": "workspace::ActivatePaneRight",
+      "ctrl+w k": "workspace::ActivatePaneUp",
+      "ctrl+w j": "workspace::ActivatePaneDown",
+      "ctrl+b b": "tab_switcher::Toggle",
+      "ctrl+b l": "pane::ActivateNextItem",
+      "ctrl+b h": "pane::ActivatePreviousItem",
+      "ctrl+b d": "pane::CloseActiveItem",
+      "ctrl+p s": "project_symbols::Toggle",
+      "ctrl+p f": "file_finder::Toggle",
+      "ctrl+p /": "workspace::NewSearch",
+      "ctrl+p p": "projects::OpenRecent",
+      "ctrl+w p": "project_panel::ToggleFocus",
+      "ctrl+w a": "agent::ToggleFocus",
+      "ctrl+w g": "git_panel::ToggleFocus",
+      "ctrl+w <": "workspace::ToggleLeftDock",
+      "ctrl+w >": "workspace::ToggleRightDock",
+      "ctrl+w n": "notification_panel::ToggleFocus",
+      "ctrl+w b": "workspace::ToggleBottomDock"
     }
   },
   {
-    "context": "Workspace && not_editing",
+    "context": "(Editor && (vim_mode == normal || vim_mode == visual)) || ProjectPanel && (vim_mode == normal || vim_mode == visual)",
     "bindings": {
       "space space": "command_palette::Toggle",
       "space f f": "file_finder::Toggle",
@@ -60,38 +52,45 @@
       "space w /": "pane::SplitRight",
       "space w -": "pane::SplitDown",
       "space w d": "pane::CloseAllItems",
-      "space w h": ["workspace::ActivatePaneInDirection", "Left"],
-      "space w l": ["workspace::ActivatePaneInDirection", "Right"],
-      "space w k": ["workspace::ActivatePaneInDirection", "Up"],
-      "space w j": ["workspace::ActivatePaneInDirection", "Down"],
-      "space b b": "tab_switcher::Toggle",
+      "space w h": "workspace::ActivatePaneLeft",
+      "space w l": "workspace::ActivatePaneRight",
+      "space w k": "workspace::ActivatePaneUp",
+      "space w j": "workspace::ActivatePaneDown",
+      "space b b": "tab_switcher::ToggleAll",
+      "space b B": "tab_switcher::Toggle",
       "space b l": "pane::ActivateNextItem",
-      "space b h": "pane::ActivatePrevItem",
+      "space b h": "pane::ActivatePreviousItem",
       "space b d": "pane::CloseActiveItem",
       "space p s": "project_symbols::Toggle",
       "space p f": "file_finder::Toggle",
       "space p /": "workspace::NewSearch",
       "space p p": "projects::OpenRecent",
-      "space u r": "workspace::ToggleRightDock",
-      "space u p": "project_panel::ToggleFocus",
-      "space u a": "assistant::ToggleFocus",
-      "space u n": "notification_panel::ToggleFocus",
-      "space u b": "workspace::ToggleBottomDock"
+      "space w p": "project_panel::ToggleFocus",
+      "space w a": "agent::ToggleFocus",
+      "space w g": "git_panel::ToggleFocus",
+      "space w <": "workspace::ToggleLeftDock",
+      "space w >": "workspace::ToggleRightDock",
+      "space w n": "notification_panel::ToggleFocus",
+      "space w b": "workspace::ToggleBottomDock"
     }
   },
   {
     "context": "Terminal",
     "bindings": {
-      "ctrl-w h": ["workspace::ActivatePaneInDirection", "Left"],
-      "ctrl-w l": ["workspace::ActivatePaneInDirection", "Right"],
-      "ctrl-w k": ["workspace::ActivatePaneInDirection", "Up"],
-      "ctrl-w j": ["workspace::ActivatePaneInDirection", "Down"]
+      "ctrl-w tab": [
+        "workspace::SendKeystrokes",
+        "space b b enter"
+      ],
+      "ctrl-w h": "workspace::ActivatePaneLeft",
+      "ctrl-w l": "workspace::ActivatePaneRight",
+      "ctrl-w k": "workspace::ActivatePaneUp",
+      "ctrl-w j": "workspace::ActivatePaneDown"
     }
   },
   {
     "context": "Editor && (showing_code_actions || showing_completions)",
     "bindings": {
-      "ctrl-k": "editor::ContextMenuPrev",
+      "ctrl-k": "editor::ContextMenuPrevious",
       "ctrl-j": "editor::ContextMenuNext"
     }
   },
@@ -100,34 +99,41 @@
     "bindings": {
       // put key-bindings here if you want them to work in normal & visual mode
       "space space": "command_palette::Toggle",
-      "space tab": ["workspace::SendKeystrokes", "space b b enter"],
+      "space tab": [
+        "workspace::SendKeystrokes",
+        "space b b enter"
+      ],
       /// space f: files
       "space f s": "workspace::Save",
+      "space f S": "workspace::SaveWithoutFormat",
       "space f f": "file_finder::Toggle",
       "space f t": "project_panel::ToggleFocus",
       "space f T": "pane::RevealInProjectPanel",
+      "space f y": "workspace::CopyRelativePath",
+      "space f Y": "workspace::CopyPath",
       /// space w: panes (in emacs terminology: windows)
       "space w /": "pane::SplitRight",
       "space w -": "pane::SplitDown",
       "space w d": "pane::CloseAllItems",
-      "space w h": ["workspace::ActivatePaneInDirection", "Left"],
-      "space w l": ["workspace::ActivatePaneInDirection", "Right"],
-      "space w k": ["workspace::ActivatePaneInDirection", "Up"],
-      "space w j": ["workspace::ActivatePaneInDirection", "Down"],
-      "space w H": ["workspace::SwapPaneInDirection", "Left"],
-      "space w L": ["workspace::SwapPaneInDirection", "Right"],
-      "space w K": ["workspace::SwapPaneInDirection", "Up"],
-      "space w J": ["workspace::SwapPaneInDirection", "Down"],
+      "space w h": "workspace::ActivatePaneLeft",
+      "space w l": "workspace::ActivatePaneRight",
+      "space w k": "workspace::ActivatePaneUp",
+      "space w j": "workspace::ActivatePaneDown",
+      "space w H": "workspace::SwapPaneLeft",
+      "space w L": "workspace::SwapPaneRight",
+      "space w K": "workspace::SwapPaneUp",
+      "space w J": "workspace::SwapPaneDown",
       "space w z": "workspace::ToggleZoom",
       /// space e: errors/diagnostics
       "space e n": "editor::GoToDiagnostic",
-      "space e N": "editor::GoToPrevDiagnostic",
-      "space e p": "editor::GoToPrevDiagnostic",
+      "space e N": "editor::GoToPreviousDiagnostic",
+      "space e p": "editor::GoToPreviousDiagnostic",
       /// space b: items (in emacs terminology: buffers)
-      "space b b": "tab_switcher::Toggle",
+      "space b b": "tab_switcher::ToggleAll",
+      "space b B": "tab_switcher::Toggle",
       "space b s": "outline::Toggle",
       "space b l": "pane::ActivateNextItem",
-      "space b h": "pane::ActivatePrevItem",
+      "space b h": "pane::ActivatePreviousItem",
       "space b d": "pane::CloseActiveItem",
       /// space p: Project
       "space p s": "project_symbols::Toggle",
@@ -138,29 +144,43 @@
       "space u r": "workspace::ToggleRightDock",
       "space u b": "workspace::ToggleBottomDock",
       "space u p": "project_panel::ToggleFocus",
-      "space u a": "assistant::ToggleFocus",
+      "space u a": "agent::ToggleFocus",
       "space u n": "notification_panel::ToggleFocus",
       /// space g: VCS (git)
-      "space g u": "editor::RevertSelectedHunks",
-      "space g p": "editor::GoToPrevHunk",
+      "space g u": "git::Restore",
+      "space g p": "editor::GoToPreviousHunk",
       "space g n": "editor::GoToHunk",
+      "space g s": "editor::ToggleSelectedDiffHunks",
+      "space g i": "git::ToggleStaged",
+      "space g +": "git::StageAndNext",
+      "space g -": "git::UnstageAndNext",
+      "space g a": "editor::ExpandAllDiffHunks",
+      "space g b": "editor::ToggleGitBlameInline",
+      "space g B": "git::Blame",
       /// space m: multi-cursor
       "space m j": "editor::AddSelectionBelow",
       "space m k": "editor::AddSelectionAbove",
       "space m p": "editor::SelectPrevious",
       "space m n": "editor::SelectNext",
       "space m a": "editor::SelectAllMatches",
-      "space m /": "editor::SelectAllMatches"
+      "space m /": "editor::SelectAllMatches",
+      "space m l": "editor::SplitSelectionIntoLines",
+      /// language server
+      "space l r": "editor::FindAllReferences",
+      /// selection
+      "space v v": "editor::SelectEnclosingSymbol",
+      /// tasks
+      "space t .": "editor::SpawnNearestTask",
+      "space t l": "task::Spawn",
+      "space t t": "task::Rerun"
     }
   },
   {
     "context": "Editor && vim_mode == visual && !VimWaiting && !VimObject",
     "bindings": {
       "s": [
-        "vim::PushOperator",
-        {
-          "AddSurrounds": {}
-        }
+        "vim::PushAddSurrounds",
+        {}
       ]
     }
   },
@@ -171,19 +191,14 @@
     }
   },
   {
-    "context": "ProjectPanel",
-    "bindings": {
-      "space w h": ["workspace::ActivatePaneInDirection", "Left"],
-      "space w l": ["workspace::ActivatePaneInDirection", "Right"],
-      "ctrl-w h": ["workspace::ActivatePaneInDirection", "Left"],
-      "ctrl-w l": ["workspace::ActivatePaneInDirection", "Right"]
-    }
-  },
-  {
     "context": "ProjectPanel && not_editing",
     "bindings": {
       "c": "project_panel::NewFile",
-      "r": "project_panel::Rename"
+      "r": "project_panel::Rename",
+      "space w h": "workspace::ActivatePaneLeft",
+      "space w l": "workspace::ActivatePaneRight",
+      "ctrl-w h": "workspace::ActivatePaneLeft",
+      "ctrl-w l": "workspace::ActivatePaneRight"
     }
   }
 ]
